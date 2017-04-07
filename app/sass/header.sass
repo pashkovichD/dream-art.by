@@ -1,17 +1,33 @@
 @import "bourbon"
 @import "vars.sass"
 
-$main-color-blue: #33647e
-$main-color-green: #309800
+/*--- Mixins ---*/
+.headers
+	font-family: 'GothamProBold', $helvetica
+	text-transform: uppercase
+	font-weight: normal
+	color: $headers-color	
+	font-size: em(50px)
+
+/*--- END Mixins ---*/
 
 body
-	font-size: 15px
+	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: em(22px)	
-	font-family: "OpenSansRegular", sans-serif
+	line-height: 22px
+	font-family: "OpenSansRegular", $helvetica
+	font-weight: 400
 	overflow-x: hidden
-	color: #444
+	color: #333
+	background: #B8B8B8 url(../img/bg_main.jpg) 
+	/*background-color: #B8B8B8*/
+	
+
+/*--- default ---*/
+*
+	margin: 0
+	padding: 0	
 
 .hidden
 	display: none
@@ -19,3 +35,48 @@ body
 a, a:hover, a:focus, a:active
 	color: $main-color-blue
 	text-decoration: underline
+
+h1, h2, h3, h4, h5, h6
+	@extend .headers
+
+b, strong
+	font-family: "OpenSansBold", $helvetica
+
+.before
+	content: ''
+	width: 100%
+	height: 100%
+	position: absolute
+	left: 0
+	top: 0
+
+/*--- END default ---*/
+
+h1		
+	line-height: em(42px)
+	background-color: $headers-color
+	color: transparent
+	text-shadow: 0px 2px 2px rgba(255,255,255,0.3)
+	-webkit-background-clip: text
+	-moz-background-clip: text
+	background-clip: text
+
+.main-head
+	/*min-height: 120px*/
+	/* &::before
+		@extend .before
+		background-color: #394b5f
+		opacity: .85 */
+	nav
+		background-color: #fff
+		h1
+			text-transform: none
+	#slider
+		img
+
+.logo
+	display: inline-block
+	margin: 10px 0
+	img
+		width: 210px
+		height: 45px
