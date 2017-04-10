@@ -19,10 +19,8 @@ body
 	font-family: "OpenSansRegular", $helvetica
 	font-weight: 400
 	overflow-x: hidden
-	color: #333
-	background: #B8B8B8 url(../img/bg_main.jpg) 
-	/*background-color: #B8B8B8*/
-	
+	color: $text-color
+	background: #B8B8B8 url(../img/bg_main.jpg)
 
 /*--- default ---*/
 *
@@ -50,6 +48,13 @@ b, strong
 	left: 0
 	top: 0
 
+.ulmenu
+	list-style-type: none
+	margin: 0
+	padding: 0
+	li
+		display: inline-block
+
 /*--- END default ---*/
 
 h1		
@@ -61,14 +66,13 @@ h1
 	-moz-background-clip: text
 	background-clip: text
 
-.main-head
+.main-head	
 	/*min-height: 120px*/
 	/* &::before
 		@extend .before
 		background-color: #394b5f
 		opacity: .85 */
-	nav
-		background-color: #fff
+	nav		
 		h1
 			text-transform: none
 	#slider
@@ -76,7 +80,42 @@ h1
 
 .logo
 	display: inline-block
-	margin: 10px 0
+	margin: 7px 0
 	img
-		width: 210px
-		height: 45px
+		width: 220px
+		height: 50px
+
+.main-menu
+	background: #fff
+	font-size: em(16px)
+	ul
+		@extend .ulmenu
+		li
+			height: 64px
+			line-height: 64px
+			padding: 0 30px			
+			a
+				text-decoration: none
+				color: $text-color
+				&:hover
+					color: $main-color-green
+					text-decoration: underline	
+			&.active
+				a
+					color: $main-color-green
+					text-decoration: underline
+
+.search
+	background: tint($main-color-green, 70%)	
+	height: 64px
+	line-height: 64px	
+
+.phone
+	background: tint($main-color-green, 40%)	
+	height: 64px
+	line-height: 64px
+
+.basket
+	background: shade($main-color-green, 10%)	
+	height: 64px
+	line-height: 64px
