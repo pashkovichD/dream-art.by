@@ -67,6 +67,9 @@ h1
 	background-clip: text
 
 .main-head	
+	
+	.top-block
+		background: #fff
 	/*min-height: 120px*/
 	/* &::before
 		@extend .before
@@ -86,14 +89,13 @@ h1
 		height: 50px
 
 .main-menu
-	background: #fff
 	font-size: em(16px)
-	ul
+	ul		
 		@extend .ulmenu
 		li
 			height: 64px
 			line-height: 64px
-			padding: 0 30px			
+			padding: 0 34px	
 			a
 				text-decoration: none
 				color: $text-color
@@ -113,7 +115,7 @@ h1
 .phone
 	background: tint($main-color-green, 40%)	
 	height: 64px
-	line-height: 64px
+	line-height: 64px	
 
 .basket
 	background: shade($main-color-green, 10%)	
