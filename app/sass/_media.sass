@@ -10,6 +10,28 @@
 @media only screen and (max-width : 992px - 1)
 	.main-menu
 		display: none
+		min-width: 295px		
+		float: right
+		text-align: right
+		background-color: tint($main-color-green, 80%)
+		position: absolute		
+		top: 70px
+		right: 15px
+		ul
+			li
+				display: block
+				height: 48px
+				line-height: 0
+				padding: 0
+			a
+				display: block
+				line-height: 48px				
+				padding: 0 20px
+				background-color: transparent
+				transition: all .3s ease
+				font-size: em(18px)
+				&:hover
+					background-color: tint($main-color-green, 20%)			
 
 
 /* Small Devices, Tablets */
@@ -68,7 +90,8 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
-	/**/
+	.main-menu
+		display: block !important
 
 
 /* Large Devices, Wide Screens */
