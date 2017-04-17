@@ -46,8 +46,8 @@ b, strong
 	width: 100%
 	height: 100%
 	position: absolute
-	left: 0
-	top: 0
+	left: 0px
+	top: 0px
 
 .ulmenu
 	list-style-type: none
@@ -58,6 +58,12 @@ b, strong
 
 .trans
 	transition: all .5s ease
+
+/* sprite */
+[class*="ic-"]
+	display: inline-block
+	vertical-align: middle
+	background: url(../img/sprite.png) no-repeat
 
 /*--- END default ---*/
 
@@ -106,23 +112,79 @@ h1
 					text-decoration: underline
 
 .search
-	background: tint($main-color-green, 70%)	
-	height: 64px
-	line-height: 64px	
-
-.phone
-	background: tint($main-color-green, 40%)	
-	height: 64px
-	line-height: 64px	
-
-.basket
-	background: shade($main-color-green, 10%)	
+	width: 42px
 	height: 64px
 	line-height: 64px
+	margin: 0 auto	
+	i.ic-search
+		width: 42px
+		height: 39px
+		background-position: -75px 0
 
-#slider
-	.slide
-		img
+.phone
+	height: 40px
+	font-size: em(15px)
+	margin-left: -15px
+	margin-right: -5px 
+	background: #efefef
+	margin-top: 12px
+	margin-bottom: 12px	
+	border: 1px solid #e2e2e2	
+	i.ic-phone
+		width: 30px
+		height: 30px
+		background-position: -45px 0
+		margin: 5px 5px 5px 10px
+	&::after
+		content: ''
+		width: 5px
+		height: 5px
+		border: 5px solid transparent
+		border-right: 5px solid #cf0f26
+		border-bottom: 5px solid #cf0f26		
+		display: none
+		position: absolute
+		bottom: 12px
+		right: 10px		
+	&::before		
+		content: ''
+		width: 7px
+		height: 7px
+		border: 7px solid transparent
+		border-right: 7px solid #efefef
+		border-bottom: 7px solid #efefef
+		display: none
+		position: absolute
+		bottom: 12px
+		right: 10px		
+	&:hover
+		border: 1px solid #ccc
+	&:hover::after, &:hover::before
+		display: block
+
+
+.basket	
+	height: 64px
+	line-height: 64px
+	position: relative
+	i.ic-basket
+		width: 45px
+		height: 50px
+		background-position: 0 0
+	.count
+		min-width: 28px
+		min-height: 28px
+		line-height: 22px
+		text-align: center
+		font-size: em(14px)
+		color: #fff
+		background: green	
+		border-radius: 50%
+		border: 3px solid #fff
+		position: absolute
+		top: 5px
+		right: 15px
+		box-shadow: 0px 0px 1px 1px rgba(0,0,0,.15)
 
 .wrap-button
 	width: 35px
@@ -164,12 +226,10 @@ h1
 .toggle-menu.on span
 	background-color: transparent
 
-.toggle-menu.on span:before
-	/*transform: rotate(45deg) translate(5px, 5px)*/
+.toggle-menu.on span:before	
 	transform: rotate(45deg) translate(5px, 5px)
 
 .toggle-menu.on span:after
-	/*transform: rotate(-45deg) translate(7px, -8px)*/
 	transform: rotate(-45deg) translate(7px, -8px)
 
 .toggle-menu.on + #menu
