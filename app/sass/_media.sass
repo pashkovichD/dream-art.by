@@ -3,8 +3,17 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	/**/
+@media only screen and (max-width : 1200px - 1)
+	.main-menu 
+		ul 
+			li
+				padding: 0 20px				
+	.phone .phone-text1
+		display: none
+	.phone .phone-text2
+		display: inline
+	.search
+		margin-left: -10px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px - 1)
@@ -31,7 +40,24 @@
 				transition: all .3s ease
 				font-size: em(18px)
 				&:hover
-					background-color: tint($main-color-green, 20%)			
+					background-color: tint($main-color-green, 20%)
+	.phone
+		margin-left: 0
+		margin-right: 0
+		&::after, &::before
+			right: 15px
+	.basket
+		margin-left: -10px
+		i.ic-basket			
+			height: 45px
+			background-position: -45px 0
+		.count
+			min-width: 25px
+			min-height: 25px
+			line-height: 20px
+			left: 25px
+			font-size: em(13px)
+			border: 2px solid #fff			
 
 
 /* Small Devices, Tablets */
