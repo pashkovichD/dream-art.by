@@ -22,7 +22,9 @@
 		min-width: 295px		
 		float: right
 		text-align: right
-		background-color: tint($main-color-green, 80%)
+		/*background-color: tint($main-color-green, 80%)*/
+		background-color: #fff
+		border: 1px solid #e2e2e2
 		position: absolute		
 		top: 70px
 		right: 15px
@@ -32,15 +34,21 @@
 				height: 48px
 				line-height: 0
 				padding: 0
-			a
-				display: block
-				line-height: 48px				
-				padding: 0 20px
-				background-color: transparent
-				transition: all .3s ease
-				font-size: em(18px)
-				&:hover
-					background-color: tint($main-color-green, 20%)
+				a
+					display: block
+					line-height: 48px				
+					padding: 0 20px
+					background-color: transparent
+					transition: all .3s ease
+					font-size: em(18px)
+					&:hover						
+						background-color: #ccc
+						text-decoration: none
+						color: #fff
+
+
+	.search
+		text-align: right
 	.phone
 		margin-left: 0
 		margin-right: 0
@@ -51,13 +59,9 @@
 		i.ic-basket			
 			height: 45px
 			background-position: -45px 0
-		.count
-			min-width: 25px
-			min-height: 25px
-			line-height: 20px
-			left: 25px
-			font-size: em(13px)
-			border: 2px solid #fff			
+			.count
+				top: -5px
+				right: -5px
 
 
 /* Small Devices, Tablets */
@@ -84,17 +88,33 @@
 		-ms-animation: none !important
 		animation: none !important
 
-	.logo
-		line-height: 50%
 	.phone .phone-text2
 		display: none
-	.search
-		margin: 0 auto
+	.search		
+		margin-left: auto
+		margin-right: -25px
+	.basket
+		text-align: right
+		i.ic-basket
+			.count
+				top: -2px
+				right: -10%
+				left: auto
+				min-width: 25px
+				min-height: 25px
+				line-height: 20px				
+				font-size: em(13px)
 
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-	/**/
+@media only screen and (max-width : 480px - 1)
+	.search
+		display: none
+	.wrap-button
+		width: 100%
+	.main-menu
+		width: 100%
+		right: 0
 
 
 /* Custom, iPhone Retina */
