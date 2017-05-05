@@ -27,7 +27,7 @@
 		border: 1px solid #e2e2e2
 		position: absolute		
 		top: 70px
-		right: 15px
+		right: 5px
 		ul
 			li
 				display: block
@@ -69,6 +69,10 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px - 1)
 	
+	.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12
+		padding-left: 7px
+		padding-right: 7px	
+
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -96,18 +100,29 @@
 		margin-left: auto
 		margin-right: -25px
 	.basket
-		text-align: right		
+		position: absolute
+		right: -30px
+	.wrap-button
+		width: 30px	
+		position: absolute
+		right: 20px	
+
+/* Свой размер */
+@media only screen and (max-width : 600px)
+	.basket
+		right: -10px	
 
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px - 1)
+@media only screen and (max-width : 480px - 1)	
 	.search
 		display: none
 	.wrap-button
-		width: 100%
+		// width: 100%
+		right: 12px
 	.main-menu
 		width: 100%
-		right: 0
+		right: -1px
 
 
 /* Custom, iPhone Retina */
