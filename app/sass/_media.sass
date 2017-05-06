@@ -97,37 +97,91 @@
 	.phone .phone-text2
 		display: none
 	.search		
-		margin-left: auto
-		margin-right: -25px
+		float: right
+		margin-right: -175%
 	.basket
-		position: absolute
-		right: -30px
+		float: right
+		margin-right: -40%
+		
 	.wrap-button
-		width: 30px	
-		position: absolute
-		right: 20px	
+		width: 30px
+		margin-right: 10%
+		
 
 /* Свой размер */
 @media only screen and (max-width : 600px)
-	.basket
-		right: -10px	
+	.search
+		margin-right: -125%
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px - 1)	
-	.search
-		display: none
-	.wrap-button
-		// width: 100%
-		right: 12px
 	.main-menu
 		width: 100%
-		right: -1px
+		right: 0
+		border: 0
+	.search
+		display: none
+	.basket
+		margin-right: -15%	
+		i.ic-basket			
+			width: 36px
+			height: 36px
+			background-position: -84px 0
+			.count				
+				min-width: 25px
+				min-height: 25px
+				line-height: 18px				
+				font-size: em(11px)				
+				border: 3px solid #fff				
+				top: -4px
+				right: -8px
+	.wrap-button
+		width: 27px
+	.toggle-menu
+		// margin: 22px auto 10px
+		& span:after, & span:before
+			top: -7px
+		& span:after
+			top: 7px
+		&.on span:before
+			transform: rotate(45deg) translate(3px,5px)
+		&.on span:after
+			transform: rotate(-45deg) translate(5px,-7px)
+
 
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	/**/
+@media only screen and (max-width : 320px - 1)
+	.basket
+		// margin-right: -20%	
+		i.ic-basket			
+			width: 26px
+			height: 30px
+			background-position: -120px 0
+			.count				
+				min-width: 22px
+				min-height: 22px
+				line-height: 15px				
+				font-size: em(10px)				
+				border: 3px solid #fff				
+				top: -5px
+				right: -8px
+	.wrap-button
+		width: 20px
+	.toggle-menu
+		// margin: 22px auto 10px
+		span
+			height: 1px
+		& span:after, & span:before
+			height: 1px
+			top: -5px
+		& span:after
+			top: 5px
+		&.on span:before
+			transform: rotate(45deg) translate(3px,3px)
+		&.on span:after
+			transform: rotate(-45deg) translate(4px,-4px)
 
 
 /*==========  Mobile First Method  ==========*/

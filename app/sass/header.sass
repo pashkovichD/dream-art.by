@@ -105,14 +105,24 @@ h1
 			padding: 0 34px	
 			a
 				text-decoration: none
-				color: $text-color				
+				color: $text-color
+				padding-bottom: 4px				
+				// transition: all .1s ease
+				// border-bottom: 2px solid transparent
 				&:hover
-					color: $main-color-green
-					text-decoration: underline	
+					// color: $main-color-green
+					// text-decoration: underline	
+					border-bottom: 2px solid #cad2db
 			&.active
 				a
-					color: $main-color-green
-					text-decoration: underline
+					// color: $main-color-green
+					// text-decoration: underline
+		// &::after
+		// 	@extend .before
+		// 	height: 1px
+		// 	top: 50px
+		// 	background: #e4e4e4
+
 
 .search
 	width: 100%
@@ -189,17 +199,17 @@ h1
 			i.ic-mts
 				width: 17px
 				height: 17px
-				background-position: -85px 0
+				background-position: -147px 0
 				margin: 0px 10px 0px 0px
 			i.ic-velcom
 				width: 17px
 				height: 17px
-				background-position: -103px 0
+				background-position: -165px 0
 				margin: 0px 10px 0px 0px				
 			i.ic-email
 				width: 16px
 				height: 11px
-				background-position: -120px 0
+				background-position: -182px 0
 				margin: 0px 10px 0px 0px
 
 		.email
@@ -240,7 +250,7 @@ h1
 .toggle-menu
 	display: block	
 	height: 30px
-	margin: 24px auto 10px 
+	margin: 22px auto 10px 
 	padding-top: 10px
 
 
