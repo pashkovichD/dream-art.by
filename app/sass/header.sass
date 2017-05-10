@@ -106,22 +106,30 @@ h1
 			a
 				text-decoration: none
 				color: $text-color
-				padding-bottom: 4px				
-				// transition: all .1s ease
-				// border-bottom: 2px solid transparent
-				&:hover
-					// color: $main-color-green
-					// text-decoration: underline	
-					border-bottom: 2px solid #cad2db
-			&.active
-				a
-					// color: $main-color-green
-					// text-decoration: underline
-		// &::after
-		// 	@extend .before
-		// 	height: 1px
-		// 	top: 50px
-		// 	background: #e4e4e4
+				padding-bottom: 4px
+
+/*--- LavaLamp Menu ---*/
+.main-menu 
+	ul
+		position: relative
+		// list-style: none
+		// text-align: center
+		// margin: -1
+		// padding: 15px 0 0 0
+		li
+		// padding: 0 20px
+		// cursor: pointer
+		// line-height: 40px
+		// color: #727272
+
+		li.lava-item
+			height: 2px
+			background: #008000
+			position: absolute
+			top: 75%
+			// padding: 0 34px
+			transition: all 0.3s ease-out
+/*--- END LavaLamp Menu ---*/
 
 
 .search
@@ -219,7 +227,8 @@ h1
 
 .basket	
 	height: 64px
-	line-height: 64px	
+	line-height: 64px
+	cursor: pointer	
 	i.ic-basket
 		width: 45px
 		height: 50px
