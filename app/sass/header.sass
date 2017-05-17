@@ -9,6 +9,24 @@
 	color: $headers-color	
 	font-size: em(50px)
 
+.before
+	content: ''
+	width: 100%
+	height: 100%
+	position: absolute
+	left: 0px
+	top: 0px
+
+.ulmenu
+	list-style-type: none
+	margin: 0
+	padding: 0
+	li
+		display: inline-block
+
+.trans
+	transition: all .5s ease
+
 /*--- END Mixins ---*/
 
 body
@@ -42,23 +60,15 @@ h1, h2, h3, h4, h5, h6
 b, strong
 	font-family: "OpenSansBold", $helvetica
 
-.before
-	content: ''
-	width: 100%
-	height: 100%
-	position: absolute
-	left: 0px
-	top: 0px
+.z1
+	z-index: 1
 
-.ulmenu
-	list-style-type: none
-	margin: 0
-	padding: 0
-	li
-		display: inline-block
+.z2
+	z-index: 2
 
-.trans
-	transition: all .5s ease
+.z3
+	z-index: 3
+
 
 /* sprite */
 [class*="ic-"]
@@ -84,6 +94,7 @@ h1
 		box-shadow: 0px 1px 1px 1px rgba(0,0,0,.1)
 		position: fixed
 		width: 100%	
+		min-width: 240px
 	nav		
 		h1
 			text-transform: none	
@@ -194,7 +205,7 @@ h1
 		display: none
 		padding-left: 10px
 	.dropdown-phone
-		display: none;
+		display: none		
 		font-size: em(18px)
 		width: 250px
 		padding: 20px 25px
