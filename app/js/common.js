@@ -6,9 +6,37 @@ $(function() {
 		$(".dropdown-phone").hide();
 	});
 
-	$(".search").click(function() {
-		alert("Поиск");
+	$(".search").click(function(e) {
+		e.stopPropagation();    
+		$('#search-form').animate({top: 0, opacity: 1}, 10);
+		$('#popup-search').focus();
+	});	
+
+	// чтобы при клике на input'е не сворачивалась форма
+	$('#search-form input').click(function(e) {
+		e.stopPropagation();
 	});
+
+	$('#search-form').click(function() {
+		$(this).animate({top: '-200px'}, 100);
+	});
+
+	// сворачивание поиска при клике вне формы
+	$(document).click( function(e){
+		if( $(event.target).closest("#search-form").length ) 
+			return;
+		$("#search-form").animate({top: '-200px'}, 100);
+		e.stopPropagation();
+	});
+
+	// сворачивание поиска при нажатии клавиши ESC
+	$(document).keydown(function(eventObject){
+		var top = parseInt($('#search-form').css('top'));
+		if (eventObject.which == 27 && top == 0) {
+			$('#search-form').animate({top: '-200px'}, 100);  
+		}
+	});
+	
 
 	// $(".phone").hover(function() {		
 	// 	// $(".dropdown-phone").slideToggle();
