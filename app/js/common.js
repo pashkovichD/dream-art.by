@@ -45,7 +45,8 @@ $(function() {
 
 	$(".phone").click(function() {		
 		// $(".dropdown-phone").slideToggle();
-		$(".dropdown-phone").toggle();
+		$(".dropdown-phone").toggle();		
+		
 		var main_menu = $(".main-menu").css('display'); // состояние меню (видно/не видно)
 		
 		if($(".wrap-button > a").hasClass('on') && (main_menu == 'block')) {
