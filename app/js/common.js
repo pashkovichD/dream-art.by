@@ -2,8 +2,8 @@ $(function() {
 	
 	$(".toggle-menu").click(function() {
 		$(this).toggleClass("on");
-		$(".main-menu").slideToggle();
-		$(".dropdown-phone").hide();
+		$(".main-menu").slideToggle();		
+		$(".dropdown-phone").animate({top: '80px', opacity: 0}, 100);
 	});
 
 	$(".search").click(function(e) {
@@ -38,14 +38,14 @@ $(function() {
 	});
 	
 
-	// $(".phone").hover(function() {		
-	// 	// $(".dropdown-phone").slideToggle();
-	// 	$(".dropdown-phone").toggle();
-	// });
-
 	$(".phone").click(function() {		
-		// $(".dropdown-phone").slideToggle();
-		$(".dropdown-phone").toggle();		
+		
+		if($(".dropdown-phone").css('opacity') == 0) {
+			$(".dropdown-phone").animate({top: '70px', opacity: 1}, 100);	
+		} else {
+			$(".dropdown-phone").animate({top: '80px', opacity: 0}, 100);	
+		}
+		
 		
 		var main_menu = $(".main-menu").css('display'); // состояние меню (видно/не видно)
 		
