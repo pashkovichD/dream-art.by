@@ -3,7 +3,8 @@ $(function() {
 	$(".toggle-menu").click(function() {
 		$(this).toggleClass("on");
 		$(".main-menu").slideToggle();		
-		$(".dropdown-phone").animate({top: '80px', opacity: 0}, 100);
+		// $(".dropdown-phone").css('visibility', 'hidden').animate({top: '80px', opacity: 0}, 100);
+		$(".dropdown-phone").hide();
 	});
 
 	$(".search").click(function(e) {
@@ -40,12 +41,21 @@ $(function() {
 
 	$(".phone").click(function() {		
 		
-		if($(".dropdown-phone").css('opacity') == 0) {
-			$(".dropdown-phone").animate({top: '70px', opacity: 1}, 100);	
+		// с использованием easing		
+		/*if($(".dropdown-phone").css('visibility') == 'hidden') {			
+			$(".dropdown-phone").css('visibility', 'visible').animate({top: '70px', opacity: 1}, 700, 'easeOutExpo');
 		} else {
-			$(".dropdown-phone").animate({top: '80px', opacity: 0}, 100);	
-		}
-		
+			$(".dropdown-phone").css('visibility', 'hidden').animate({top: '80px', opacity: 0}, 100);
+		}*/
+
+		// с использованием animate.css
+		$(".dropdown-phone").toggle();
+		// $(".dropdown-phone").addClass('animated fadeInDown');
+		/*if($(".dropdown-phone").hasClass('animated')) {			
+			$(".dropdown-phone").removeClass('animated fadeIn');
+		} else {
+			$(".dropdown-phone").addClass('animated fadeIn');
+		}*/
 		
 		var main_menu = $(".main-menu").css('display'); // состояние меню (видно/не видно)
 		

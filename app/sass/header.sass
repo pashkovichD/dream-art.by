@@ -87,14 +87,15 @@ h1
 	-moz-background-clip: text
 	background-clip: text
 
-.main-head	
-	
+.main-head
+	position: relative		
 	.top-block
 		background: #fff
 		box-shadow: 0px 1px 1px 1px rgba(0,0,0,.1)
 		position: fixed
 		width: 100%	
 		min-width: 240px
+		z-index: 2
 	nav		
 		h1
 			text-transform: none	
@@ -213,7 +214,6 @@ h1
 
 /*--- END SEARCH Form ---*/
 
-
 .phone
 	height: 40px
 	font-size: em(15px)
@@ -261,19 +261,33 @@ h1
 	.phone-text2
 		display: none
 		padding-left: 10px
-	.dropdown-phone
-		// display: none
+	.dropdown-phone		
+		// easing
+		// visibility: hidden
+		// font-size: em(18px)
+		// width: 250px
+		// padding: 20px 25px
+		// margin-right: 10px
+		// position: absolute		
+		// top: 80px
+		// opacity: 0
+		// right: 0
+		// background-color: #fff
+		// border: 1px solid #e2e2e2
+
+		// animate.css
+		display: none		
 		font-size: em(18px)
 		width: 250px
 		padding: 20px 25px
 		margin-right: 10px
-		position: absolute
-		// top: 70px
-		top: 80px
-		opacity: 0
+		position: absolute		
+		top: 70px		
+		opacity: 0		
 		right: 0
 		background-color: #fff
 		border: 1px solid #e2e2e2
+		animation-duration: 0.5s
 		p
 			margin-bottom: 10px
 			font-size: em(18px)
@@ -297,6 +311,44 @@ h1
 			border-top: 1px solid tint($main-color-green, 30%)
 			padding-top: 5px
 			font-size: em(15px)
+.line-phone
+	display: none
+	position: absolute	
+	top: 62px
+	z-index: 1
+	right: 0
+	font-size: em(18px)
+	width: 50%
+	padding: 20px 25px	
+	position: absolute
+	background-color: #fff
+	border: 1px solid #e2e2e2
+	animation-duration: 0.5s
+	p
+		margin-bottom: 10px
+		font-size: em(18px)
+		i.ic-mts
+			width: 17px
+			height: 17px
+			background-position: -147px 0
+			margin: 0px 10px 0px 0px
+		i.ic-velcom
+			width: 17px
+			height: 17px
+			background-position: -165px 0
+			margin: 0px 10px 0px 0px				
+		i.ic-email
+			width: 16px
+			height: 11px
+			background-position: -182px 0
+			margin: 0px 10px 0px 0px
+
+	.email
+		border-top: 1px solid tint($main-color-green, 30%)
+		padding-top: 5px
+		font-size: em(15px)
+
+
 
 .basket	
 	height: 64px
