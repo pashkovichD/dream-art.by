@@ -135,6 +135,13 @@
 		display: none
 	.line-phone
 		width: 100%
+		text-align: center
+		margin-right: 0
+		font-size: em(14px)
+		p
+			float: none
+		.search
+			display: inline-block			
 	.basket
 		margin-right: -15%	
 		i.ic-basket			
@@ -163,14 +170,31 @@
 			transform: rotate(-45deg) translate(5px,-7px)
 
 
+/* Свой размер */
+@media only screen and (max-width : 350px)
+	.line-phone
+		p
+			margin: 6px 0 3px 2px
+		.search
+			margin-left: 2px
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px - 1)
 	.logo	
 		line-height: 55px
+	.line-phone
+		top: 54px
+		left: 0
+		p
+			.more320
+				display: none
+			.less320
+				display: inline
 	.basket
 		height: 55px
 		line-height: 55px
+		margin-right: 20%
 		i.ic-basket			
 			width: 26px
 			height: 30px
@@ -185,6 +209,7 @@
 				right: -8px
 	.wrap-button
 		width: 20px
+		margin-right: 12px
 	.toggle-menu
 		margin: 18px auto 0
 		span
@@ -200,6 +225,10 @@
 			transform: rotate(-45deg) translate(4px,-4px)
 	.main-menu
 		top: 60px
+		ul 
+			li 
+				a
+					padding-right: 30px
 
 
 /*==========  Mobile First Method  ==========*/

@@ -316,19 +316,22 @@ h1
 			padding-top: 5px
 			font-size: em(15px)
 .line-phone
-	display: none
-	position: absolute	
+	display: none	
 	top: 62px
 	z-index: 1
 	right: 0
+	min-width: 240px
 	font-size: em(15px)
-	position: absolute
+	position: fixed
 	background-color: #fff	
 	animation-duration: 0.5s
+	margin-right: 15px
 	p		
 		margin: 6px 6px 3px 8px
 		display: inline-block
 		float: right
+		.less320
+			display: none
 		i.ic-mts
 			width: 15px
 			height: 15px
@@ -343,6 +346,22 @@ h1
 			margin: 0px 5px 0px 0px
 			position: relative
 			top: -2px
+	.search
+		display: none
+		float: none
+		width: auto
+		margin: 0
+		height: auto
+		line-height: 0
+		i.ic-search
+			width: 23px
+			height: 21px
+			background-position: -76px -82px
+			margin-bottom: 2px
+			opacity: .5
+			transition: opacity .3s ease
+			&:hover			
+				opacity: 1
 
 .basket	
 	height: 64px
