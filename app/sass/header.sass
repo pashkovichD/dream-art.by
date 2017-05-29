@@ -1,6 +1,7 @@
 @import "bourbon"
 @import "vars.sass"
 
+
 /*--- Mixins ---*/
 .headers
 	font-family: 'GothamProBold', $helvetica
@@ -34,7 +35,7 @@ body
 	min-width: 320px
 	height: 1300px
 	position: relative
-	line-height: 22px
+	// line-height: 22px
 	font-family: "OpenSansRegular", $helvetica
 	font-weight: 400
 	overflow-x: hidden
@@ -98,7 +99,67 @@ h1
 		z-index: 2
 	nav		
 		h1
-			text-transform: none	
+			text-transform: none
+	#slider
+		.slider-wrap
+			position: relative
+			.slide				
+				img
+					width: 100%
+					margin-top: 60px
+				.description
+					position: absolute
+					bottom: 80px
+					left: 50px
+					color: #135175
+					h2
+						font-family: 'NewZelek', $helvetica
+						font-size: em(60px)						
+						text-shadow: 1px 1px 2px white
+						color: #135175
+						line-height: 47px
+					p
+						width: 50%
+						margin-top: 20px
+						font-size: em(18px)
+						background: rgba(255,255,255,.7)
+						padding: 5px 10px						
+			// стилизация стрелок слайдера
+			button
+				-webkit-appearance: none
+				background: transparent
+				border: 0
+				outline: 0
+				svg
+					padding: 5px
+				&.arrow
+					cursor: pointer
+					position: absolute
+					top: 50%
+					
+					width: 70px
+					height: 90px			
+				&.left
+					left: 3%
+					&:hover polyline
+						stroke-width: 3
+					&:focus polyline
+						stroke-width: 3
+					&:active polyline
+						stroke-width: 6
+						transition: all 100ms ease-in-out			
+				&.right
+					right: 3%
+					&:hover polyline
+						stroke-width: 3
+					&:focus polyline
+						stroke-width: 3
+					&:active polyline
+						stroke-width: 6
+						transition: all 100ms ease-in-out
+			polyline
+				transition: all 250ms ease-in-out
+			// END стилизации стрелок слайдера			
 
 .logo
 	display: inline-block
