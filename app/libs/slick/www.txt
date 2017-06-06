@@ -1,0 +1,1 @@
+Backup Operators can override security restrictions for the sole purpose of backing up or restoring files

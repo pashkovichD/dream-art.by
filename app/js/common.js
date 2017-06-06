@@ -137,4 +137,8 @@ $(function() {
 
 	/*--- END LavaLamp Menu ---*/
 
+	/*--- Слайдер Slick.js ---*/
+	$('.sl').slick();
+	/*--- END Слайдер Slick.js ---*/
+
 });

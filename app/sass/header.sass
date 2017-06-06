@@ -1,7 +1,6 @@
 @import "bourbon"
 @import "vars.sass"
 
-
 /*--- Mixins ---*/
 .headers
 	font-family: 'GothamProBold', $helvetica
@@ -104,6 +103,7 @@ h1
 		.slider-wrap
 			position: relative
 			.slide				
+				position: relative
 				img
 					width: 100%
 					margin-top: 60px
@@ -116,7 +116,7 @@ h1
 						font-family: 'NewZelek', $helvetica
 						font-size: em(60px)						
 						text-shadow: 1px 1px 0px white
-						color: #02133A
+						color: #113277
 						line-height: 47px
 					p
 						width: 50%
@@ -227,12 +227,12 @@ h1
 
 #search-form
 	position: fixed
-	width: 100%	
+	width: 100%
 	padding-bottom: 15px
-	top: -200px	
+	top: -200px
 	left: 0
 	right: 0
-	opacity: 0	
+	opacity: 0
 	white-space: nowrap
 	z-index: 9999
 	background-color: rgba(255,255,255,.9)
@@ -425,10 +425,10 @@ h1
 			&:hover			
 				opacity: 1
 
-.basket	
+.basket
 	height: 64px
 	line-height: 64px
-	cursor: pointer	
+	cursor: pointer
 	i.ic-basket
 		width: 45px
 		height: 50px
@@ -475,7 +475,7 @@ h1
 
 .toggle-menu span
 	position: relative
-	display: block	
+	display: block
 
 .toggle-menu span,
 .toggle-menu span:after,
@@ -499,4 +499,4 @@ h1
 
 .toggle-menu.on + #menu
 	opacity: 1
-	visibility: visible	
+	visibility: visible
