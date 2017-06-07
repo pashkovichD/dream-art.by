@@ -138,7 +138,18 @@ $(function() {
 	/*--- END LavaLamp Menu ---*/
 
 	/*--- Слайдер Slick.js ---*/
-	$('.sl').slick();
+	$('.slider-wrap').slick({
+		autoplay: true,
+		autoplaySpeed: 3000,
+		speed: 1000,
+		cssEase: 'ease-in-out',
+		// lazyLoad: 'ondemand'		
+		// centerMode: true,
+		// centerPadding: '10px'
+		// dots: true,
+		// arrows: false
+		// fade: true
+	});
 	/*--- END Слайдер Slick.js ---*/
 
 });

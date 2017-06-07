@@ -102,8 +102,10 @@ h1
 	#slider
 		.slider-wrap
 			position: relative
+			// overflow: hidden
 			.slide				
 				position: relative
+				outline: none				
 				img
 					width: 100%
 					margin-top: 60px
@@ -160,6 +162,11 @@ h1
 			polyline
 				transition: all 250ms ease-in-out
 			// END стилизации стрелок слайдера			
+.slick-prev
+	left: 25px
+.slick-next
+	right: 25px
+
 
 .logo
 	display: inline-block
