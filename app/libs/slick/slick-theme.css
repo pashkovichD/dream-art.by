@@ -50,7 +50,7 @@
     outline: none;
     background: transparent;
 }
-.slick-prev:hover:before,
+/* .slick-prev:hover:before,
 .slick-prev:focus:before,
 .slick-next:hover:before,
 .slick-next:focus:before
@@ -61,9 +61,9 @@
 .slick-next.slick-disabled:before
 {
     opacity: .25;
-}
+} */
 
-.slick-prev:before,
+/* .slick-prev:before,
 .slick-next:before
 {
     font-family: 'slick';
@@ -75,7 +75,7 @@
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 .slick-prev
 {
@@ -86,14 +86,14 @@
     right: -25px;
     left: auto;
 }
-.slick-prev:before
+/* .slick-prev:before
 {
     content: '←';
 }
 [dir='rtl'] .slick-prev:before
 {
     content: '→';
-}
+} */
 
 .slick-next
 {
@@ -104,14 +104,14 @@
     right: auto;
     left: -25px;
 }
-.slick-next:before
+/* .slick-next:before
 {
     content: '→';
 }
 [dir='rtl'] .slick-next:before
 {
     content: '←';
-}
+} */
 
 /* Dots */
 .slick-dotted.slick-slider

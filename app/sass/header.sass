@@ -1,5 +1,6 @@
 @import "bourbon"
 @import "vars.sass"
+@import "libs.sass"
 
 /*--- Mixins ---*/
 .headers
@@ -162,10 +163,22 @@ h1
 			polyline
 				transition: all 250ms ease-in-out
 			// END стилизации стрелок слайдера			
+.slick-slider 
+	.slick-list
+		z-index: -1
+
 .slick-prev
 	left: 25px
+	width: 60px
+	height: 80px
+	svg
+		width: 100%
+		height: auto
 .slick-next
 	right: 25px
+	width: 60px
+	height: 80px
+
 
 
 .logo
