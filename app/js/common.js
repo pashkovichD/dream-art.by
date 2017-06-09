@@ -143,12 +143,26 @@ $(function() {
 		// autoplaySpeed: 3000,
 		speed: 1000,
 		cssEase: 'ease-in-out',
+
 		// lazyLoad: 'ondemand'		
 		// centerMode: true,
 		// centerPadding: '10px'
 		// dots: true,
 		// arrows: false
 		// fade: true
+	});
+
+	$('.slick-next').click(function() {		
+		$('.slick-slide > h2').animate({opacity: 0, left: '-150px'}).animate({left: '150px'});
+		$('.slick-slide > p').animate({opacity: 0, left: '-150px'}).animate({left: '150px'});
+		$('.slick-current > h2').delay(300).animate({left: '70px', opacity: 1}, 1000, 'easeOutExpo');
+		$('.slick-current > p').delay(500).animate({left: '70px', opacity: 1}, 1000, 'easeOutExpo');
+	});
+	$('.slick-prev').click(function() {		
+		$('.slick-slide > h2').animate({opacity: 0, left: '150px'});
+		$('.slick-slide > p').animate({opacity: 0, left: '150px'});
+		$('.slick-current > h2').delay(700).animate({left: '70px', opacity: 1}, 1000, 'easeOutExpo');
+		$('.slick-current > p').delay(900).animate({left: '70px', opacity: 1}, 1000, 'easeOutExpo');
 	});
 	/*--- END Слайдер Slick.js ---*/
 

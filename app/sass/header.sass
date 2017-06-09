@@ -110,74 +110,82 @@ h1
 				img
 					width: 100%
 					margin-top: 60px
-				.description
+				h2
+					font-family: 'NewZelek', $helvetica
+					font-size: em(60px)						
+					text-shadow: 1px 1px 0px white
+					color: #113277
+					line-height: 47px
+					opacity: 1
 					position: absolute
-					bottom: 80px
-					left: 50px
-					color: #135175
-					h2
-						font-family: 'NewZelek', $helvetica
-						font-size: em(60px)						
-						text-shadow: 1px 1px 0px white
-						color: #113277
-						line-height: 47px
-					p
-						width: 50%
-						margin-top: 20px
-						font-size: em(18px)
-						background: rgba(255,255,255,.7)
-						padding: 5px 10px						
-			// стилизация стрелок слайдера
-			button
-				-webkit-appearance: none
-				background: transparent
-				border: 0
-				outline: 0
-				svg
-					padding: 5px
-				&.arrow
-					cursor: pointer
+					left: 70px
+					top: 400px
+				p
+					width: 500px
+					margin-top: 20px
+					font-size: em(18px)
+					background: rgba(255,255,255,.7)						
+					padding: 5px 10px				
+					color: #135175		
+					opacity: 1
 					position: absolute
-					top: 50%
-					
-					width: 70px
-					height: 90px			
-				&.left
-					left: 3%
-					&:hover polyline
-						stroke-width: 3
-					&:focus polyline
-						stroke-width: 3
-					&:active polyline
-						stroke-width: 6
-						transition: all 100ms ease-in-out			
-				&.right
-					right: 3%
-					&:hover polyline
-						stroke-width: 3
-					&:focus polyline
-						stroke-width: 3
-					&:active polyline
-						stroke-width: 6
-						transition: all 100ms ease-in-out
-			polyline
-				transition: all 250ms ease-in-out
-			// END стилизации стрелок слайдера			
+					left: 70px
+					top: 450px
+
+
 .slick-slider 
+	// стилизация стрелок слайдера
+	button
+		-webkit-appearance: none
+		background: transparent
+		border: 0
+		outline: 0
+		svg
+			padding: 5px			
+		&.slick-arrow
+			cursor: pointer
+			position: absolute
+			z-index: 1
+		&.slick-prev			
+			&:hover polyline
+				stroke-width: 3
+			&:focus polyline
+				stroke-width: 3
+			&:active polyline
+				stroke-width: 6
+				transition: all 100ms ease-in-out			
+		&.slick-next			
+			&:hover polyline
+				stroke-width: 3
+			&:focus polyline
+				stroke-width: 3
+			&:active polyline
+				stroke-width: 6
+				transition: all 100ms ease-in-out
+	polyline
+		transition: all 250ms ease-in-out		
+	// END стилизации стрелок слайдера
 	.slick-list
-		z-index: -1
+		// z-index: -1
 
 .slick-prev
 	left: 25px
 	width: 60px
 	height: 80px
-	svg
-		width: 100%
-		height: auto
+	
 .slick-next
 	right: 25px
 	width: 60px
 	height: 80px
+.slick-current
+	// h2
+	// 	opacity: 1 !important
+	// 	left: 70px !important
+	// p
+	// 	opacity: 1 !important
+	// 	left: 70px !important
+
+
 
 
 
