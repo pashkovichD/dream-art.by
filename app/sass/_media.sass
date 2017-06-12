@@ -17,6 +17,16 @@
 	#search-form 
 		.wrapper
 			width: 970px
+	.main-head #slider .slider-wrap 
+		button
+			margin-top: 20px
+		.slide 
+			h2
+				font-size: em(50px)
+				top: 350px
+			p
+				top: 390px
+				font-size: em(17px)
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px - 1)
@@ -76,6 +86,23 @@
 			.count
 				top: -5px
 				right: -5px
+	.main-head #slider .slider-wrap 
+		button
+			margin-top: 25px
+			svg
+				width: 40px
+				height: 60px
+		.slide 
+			h2
+				font-size: em(50px)
+				top: 280px
+			p
+				top: 315px
+				font-size: em(16px)
+	.slick-prev
+		left: 10px
+	.slick-next
+		right: 7px
 
 
 /* Small Devices, Tablets */
@@ -129,12 +156,47 @@
 	#search-form 
 		.wrapper
 			width: 90%
-		
+	.main-head #slider .slider-wrap 
+		button
+			margin-top: 25px			
+		.slide 
+			h2
+				font-size: em(40px)
+				top: 65%				
+			p
+				width: 75%
+				top: 72%
+				font-size: em(15px)
+				padding: 3px 7px
+				line-height: 20px
+
 
 /* Свой размер */
 @media only screen and (max-width : 600px)
 	.search
 		margin-right: -125%
+	.main-head #slider .slider-wrap 
+		button
+			
+			svg
+				width: 30px
+				height: 40px
+		.slide 
+			h2
+				font-size: em(30px)
+				top: auto				
+				bottom: 85px
+			p
+				width: 80%
+				top: auto				
+				bottom: 10px
+				font-size: em(14px)
+				padding: 3px 7px
+				line-height: 20px
+				// background: rgba(0,0,0,.7)
+				// color: #ddd
+				line-height: 18px
+
 
 
 /* Extra Small Devices, Phones */
@@ -184,6 +246,8 @@
 			transform: rotate(45deg) translate(3px,5px)
 		&.on span:after
 			transform: rotate(-45deg) translate(5px,-7px)
+	#slider
+		display: none
 
 
 /* Свой размер */
