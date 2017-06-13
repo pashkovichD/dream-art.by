@@ -92,15 +92,18 @@ h1
 	position: relative		
 	.top-block
 		background: #fff
+		// background: #EFEBE3
 		box-shadow: 0px 1px 1px 1px rgba(0,0,0,.1)
 		position: fixed
 		width: 100%	
-		min-width: 240px
+		// min-width: 240px
+		min-width: 320px
 		z-index: 2
 	nav		
 		h1
 			text-transform: none
 	#slider
+		background: #fff
 		.slider-wrap
 			position: relative
 			// overflow: hidden
@@ -111,11 +114,12 @@ h1
 					width: 100%
 					margin-top: 60px
 				h2
-					font-family: 'NewZelek', $helvetica
+					font-family: 'NewZelek', $helvetica					
+					letter-spacing: 1px
 					font-size: em(60px)						
-					// text-shadow: 1px 1px 0px rgba(255,255,255,.5)
-					// color: #113277
-					color: #146592
+					text-shadow: 1px 1px 3px rgba(0,0,0,.5)					
+					color: #ff7200
+					// color: #135275
 					line-height: 47px
 					opacity: 1
 					position: absolute
@@ -125,7 +129,7 @@ h1
 					width: 500px
 					margin-top: 20px
 					font-size: em(18px)
-					line-height: 22px
+					line-height: 24px
 					background: rgba(255,255,255,.7)						
 					padding: 7px 10px
 					color: #135175
@@ -133,6 +137,22 @@ h1
 					position: absolute
 					left: 70px
 					top: 450px
+	.reklama
+		background: #50bbdb
+		color: #fff
+		text-align: center
+		font-size: em(22px)
+		padding: 15px		
+		i.ic-db_arrows
+			width: 30px
+			height: 30px
+			background-position: 0 -123px
+			margin-right: 10px
+		span
+			display: inline-block
+			background: #fff
+			color: #50bbdb
+			padding: 0px 7px 2px 7px
 
 
 .slick-slider 
@@ -258,6 +278,7 @@ h1
 #search-form
 	position: fixed
 	width: 100%
+	min-width: 320px
 	padding-bottom: 15px
 	top: -200px
 	left: 0
@@ -412,7 +433,8 @@ h1
 	top: 62px
 	z-index: 1
 	right: 0
-	min-width: 240px
+	// min-width: 240px
+	min-width: 320px
 	font-size: em(15px)
 	position: fixed
 	background-color: #fff	

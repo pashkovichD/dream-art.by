@@ -27,6 +27,7 @@
 			p
 				top: 390px
 				font-size: em(17px)
+				line-height: 22px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px - 1)
@@ -41,28 +42,32 @@
 		top: 70px
 		right: 5px
 		ul
+			border-top: 3px solid #232D3B
+			border-bottom: 3px solid #232D3B
 			li
 				display: block
 				height: 48px
 				line-height: 0
 				padding: 0
-				background: #fff
+				// background: #fff
+				background: #1C242C
 				transition: all .3s ease
 				a
 					display: block
 					line-height: 48px				
 					padding: 0 20px
-					background-color: transparent
-					transition: all .3s ease
+					font-family: 'OpenSansLight', $helvetica
+					// background-color: transparent
+					// transition: all .5s ease
 					font-size: em(18px)
 					border-top: 1px solid rgba(0,0,0,.075)
-					color: #777
-					&:hover						
-						// background-color: #ccc
+					color: #fff
+					&:hover
 						text-decoration: none
-						color: #fff
+						color: #F39F18
 				&:hover
-					background: #004875
+					// background: #004875
+					background: #273646
 
 
 
@@ -93,8 +98,7 @@
 				width: 40px
 				height: 60px
 		.slide 
-			h2
-				font-size: em(50px)
+			h2				
 				top: 280px
 			p
 				top: 315px
@@ -104,6 +108,14 @@
 	.slick-next
 		right: 7px
 
+	.main-head
+		.reklama
+			font-size: em(18px)
+			padding: 7px		
+			i.ic-db_arrows
+				width: 23px
+				height: 23px
+				background-position: -29px -123px			
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px - 1)
@@ -169,15 +181,31 @@
 				font-size: em(15px)
 				padding: 3px 7px
 				line-height: 20px
+	.main-head
+		.reklama
+			font-size: em(15px)			
+			i.ic-db_arrows
+				width: 13px
+				height: 13px
+				background-position: -52px -123px
+				margin-right: 5px
+			span
+				display: inline-block
+				background: #fff
+				color: #50bbdb
+				padding: 0px 7px
 
 
 /* Свой размер */
 @media only screen and (max-width : 600px)
 	.search
 		margin-right: -125%
-	.main-head #slider .slider-wrap 
-		button
+	.main-head
+		.reklama			
+			padding: 3px
 			
+	.main-head #slider .slider-wrap 
+		button			
 			svg
 				width: 30px
 				height: 40px
@@ -185,17 +213,13 @@
 			h2
 				font-size: em(30px)
 				top: auto				
-				bottom: 85px
+				bottom: 65px
 			p
-				width: 80%
+				width: 82%
 				top: auto				
 				bottom: 10px
-				font-size: em(14px)
-				padding: 3px 7px
-				line-height: 20px
-				// background: rgba(0,0,0,.7)
-				// color: #ddd
-				line-height: 18px
+				font-size: em(13px)
+				line-height: 16px
 
 
 
@@ -211,6 +235,7 @@
 		width: 100%
 		text-align: center
 		margin-right: 0
+		padding-left: 15px
 		font-size: em(14px)
 		p
 			float: none
@@ -245,9 +270,21 @@
 		&.on span:before
 			transform: rotate(45deg) translate(3px,5px)
 		&.on span:after
-			transform: rotate(-45deg) translate(5px,-7px)
-	#slider
-		display: none
+			transform: rotate(-45deg) translate(5px,-7px)	
+
+	.main-head #slider .slider-wrap 
+		button			
+			svg
+				width: 20px
+				height: 30px			
+		.slide
+			img
+				margin-top: 90px 
+			h2
+				font-size: em(25px)
+				bottom: 3%
+			p
+				display: none
 
 
 /* Свой размер */
