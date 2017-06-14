@@ -60,3 +60,152 @@ body textarea:required:valid
 
 //ALWAYS END
 @import "media"
+
+/*--- Tabs Каталог---*/
+.tab-wrap 
+	transition: 0.3s box-shadow ease
+	border-radius: 2px
+	max-width: 100%	
+	position: relative
+	list-style: none	
+	margin: 40px 0
+	// box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
+	// box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3)
+
+
+.tab
+	display: none
+
+.tab:checked:nth-of-type(1) ~ .tab__content:nth-of-type(1),
+.tab:checked:nth-of-type(2) ~ .tab__content:nth-of-type(2),
+.tab:checked:nth-of-type(3) ~ .tab__content:nth-of-type(3)
+	opacity: 1
+	transition: 0.5s opacity ease-in, 0.8s transform ease
+	position: relative
+	top: 0
+	z-index: 100
+	transform: translateY(0px)
+	text-shadow: 0 0 0	
+
+//  .tab:first-of-type:not(:last-of-type) + label {
+// border-top-right-radius: 0;
+// border-bottom-right-radius: 0;
+// }
+
+// .tab:not(:first-of-type):not(:last-of-type) + label {
+// border-radius: 0;
+// }
+
+// .tab:last-of-type:not(:first-of-type) + label {
+// border-top-left-radius: 0;
+// border-bottom-left-radius: 0;
+// }
+
+.tab:checked + label
+	background: url(../img/bg_menu_catalog.jpg) repeat-x
+	// box-shadow: 0 -1px 0 #fff inset
+	text-shadow: 0 1px 1px rgba(0,0,0,.5)
+	cursor: default
+	color: #fff
+	i.ic-stendy		
+		width: 37px
+		height: 37px
+		background-position: 0 -223px
+		margin-right: 10px
+		float: left
+		position: relative
+		top: -8px
+
+.tab:checked + label:hover
+	// box-shadow: 0 -1px 0 #fff inset
+	color: #fff
+	i.ic-stendy		
+		width: 37px
+		height: 37px
+		background-position: 0 -223px
+		margin-right: 10px
+		float: left
+		position: relative
+		top: -8px
+
+.tab + label
+	// box-shadow: 0 -1px 0 #eee inset
+	// border-radius: 2px 2px 0 0
+	cursor: pointer
+	display: inline-block	
+	text-decoration: none
+	text-transform: uppercase
+	font-family: 'GothamProRegular', $helvetica
+	letter-spacing: 1px
+	color: #33647e
+	text-align: center	
+	user-select: none
+	text-align: center
+	transition: 0.3s background-color ease, 0.3s box-shadow ease
+	height: 50px
+	// box-sizing: border-box
+	padding: 15px
+	i.ic-stendy		
+		width: 37px
+		height: 37px
+		background-position: 0 -151px
+		margin-right: 10px
+		float: left
+		position: relative
+		top: -8px
+		// padding: 15px
+		// border: 1px solid #33647e
+		// border-radius: 50%
+
+.tab + label:hover
+	color: #319900
+	// box-shadow: 0 1px 0 #f4f4f4 inset	
+	i.ic-stendy		
+		width: 37px
+		height: 37px
+		background-position: 0 -187px
+		margin-right: 10px
+		float: left
+		position: relative
+		top: -8px
+
+.tab__content
+	padding: 10px 25px
+	background-color: #fff
+	position: absolute
+	width: 100%
+	z-index: -1
+	opacity: 0
+	left: 0
+	transform: translateY(-3px)
+	border-radius: 2px
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3)
+	h1
+		font-size: em(35px)
+		line-height: em(25px)
+		text-shadow: none
+		color: #555
+		font-family: 'OpenSansLight', $helvetica
+		text-transform: none
+		margin: 0 0 20px 0
+		span						
+			background: #319900
+			font-family: 'OpenSansRegular', $helvetica			
+			color: #fff
+			font-size: 19px
+			padding: 0 5px 0 0
+			margin-left: 25px
+			position: relative			
+			top: -4px
+			&:after
+				content: ''
+				position: absolute
+				left: -26px
+				top: 0
+				width: 0
+				height: 0
+				border: 13px solid transparent
+				border-right-color: #319900
+
+
+/*--- END Tabs Каталог---*/
