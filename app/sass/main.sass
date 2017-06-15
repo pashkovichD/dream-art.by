@@ -4,6 +4,14 @@
 //Load Libs SASS
 @import "app/libs/animate/animate.sass"
 
+.before
+	content: ''
+	width: 100%
+	height: 100%
+	position: absolute
+	left: 0px
+	top: 0px
+
 /*--- Переопределение fadeInDown как на GeekBrains ---*/
 @-webkit-keyframes fadeInDown
 	0%
@@ -62,16 +70,12 @@ body textarea:required:valid
 @import "media"
 
 /*--- Tabs Каталог---*/
-.tab-wrap 
-	transition: 0.3s box-shadow ease
+.tab-wrap
 	border-radius: 2px
 	max-width: 100%	
 	position: relative
 	list-style: none	
 	margin: 40px 0
-	// box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
-	// box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3)
-
 
 .tab
 	display: none
@@ -80,57 +84,47 @@ body textarea:required:valid
 .tab:checked:nth-of-type(2) ~ .tab__content:nth-of-type(2),
 .tab:checked:nth-of-type(3) ~ .tab__content:nth-of-type(3)
 	opacity: 1
-	transition: 0.5s opacity ease-in, 0.8s transform ease
+	// transition: 0.5s opacity ease-in, 0.8s transform ease
+	transition: 0.2s opacity ease-in, 0.2s transform ease
 	position: relative
 	top: 0
-	z-index: 100
+	z-index: 1
 	transform: translateY(0px)
-	text-shadow: 0 0 0	
-
-//  .tab:first-of-type:not(:last-of-type) + label {
-// border-top-right-radius: 0;
-// border-bottom-right-radius: 0;
-// }
-
-// .tab:not(:first-of-type):not(:last-of-type) + label {
-// border-radius: 0;
-// }
-
-// .tab:last-of-type:not(:first-of-type) + label {
-// border-top-left-radius: 0;
-// border-bottom-left-radius: 0;
-// }
+	text-shadow: 0 0 0
 
 .tab:checked + label
-	background: url(../img/bg_menu_catalog.jpg) repeat-x
-	// box-shadow: 0 -1px 0 #fff inset
+	background: url(../img/bg_menu_catalog.jpg) repeat-x	
 	text-shadow: 0 1px 1px rgba(0,0,0,.5)
 	cursor: default
 	color: #fff
-	i.ic-stendy		
-		width: 37px
-		height: 37px
-		background-position: 0 -223px
-		margin-right: 10px
-		float: left
-		position: relative
-		top: -8px
+	position: relative
+	i.ic-stendy
+		background-position: 0 -224px
+	i.ic-tables		
+		background-position: -38px -224px
+	i.ic-plexiglass
+		background-position: -76px -224px	
+	&:before
+		@extend .before
+		width: 18px
+		height: 9px
+		background: url(../img/sprite.png) -200px 0 no-repeat
+		position: absolute		
+		top: auto
+		bottom: 0
+		left: 50%
+		margin-left: -9px
 
-.tab:checked + label:hover
-	// box-shadow: 0 -1px 0 #fff inset
+.tab:checked + label:hover	
 	color: #fff
-	i.ic-stendy		
-		width: 37px
-		height: 37px
-		background-position: 0 -223px
-		margin-right: 10px
-		float: left
-		position: relative
-		top: -8px
+	i.ic-stendy
+		background-position: 0 -224px
+	i.ic-tables		
+		background-position: -38px -224px
+	i.ic-plexiglass
+		background-position: -76px -224px
 
-.tab + label
-	// box-shadow: 0 -1px 0 #eee inset
-	// border-radius: 2px 2px 0 0
+.tab + label	
 	cursor: pointer
 	display: inline-block	
 	text-decoration: none
@@ -142,35 +136,34 @@ body textarea:required:valid
 	user-select: none
 	text-align: center
 	transition: 0.3s background-color ease, 0.3s box-shadow ease
-	height: 50px
-	// box-sizing: border-box
+	height: 50px	
 	padding: 15px
-	i.ic-stendy		
-		width: 37px
+	i.ic-stendy,
+	i.ic-tables,
+	i.ic-plexiglass
+		width: 38px
 		height: 37px
 		background-position: 0 -151px
 		margin-right: 10px
 		float: left
 		position: relative
-		top: -8px
-		// padding: 15px
-		// border: 1px solid #33647e
-		// border-radius: 50%
+		top: -8px		
+	i.ic-tables
+		background-position: -38px -151px
+	i.ic-plexiglass
+		background-position: -76px -151px
 
 .tab + label:hover
-	color: #319900
-	// box-shadow: 0 1px 0 #f4f4f4 inset	
-	i.ic-stendy		
-		width: 37px
-		height: 37px
-		background-position: 0 -187px
-		margin-right: 10px
-		float: left
-		position: relative
-		top: -8px
+	color: #319900	
+	i.ic-stendy
+		background-position: 0 -188px
+	i.ic-tables		
+		background-position: -38px -188px
+	i.ic-plexiglass
+		background-position: -76px -188px
 
 .tab__content
-	padding: 10px 25px
+	padding: 10px 0px
 	background-color: #fff
 	position: absolute
 	width: 100%
@@ -187,7 +180,8 @@ body textarea:required:valid
 		color: #555
 		font-family: 'OpenSansLight', $helvetica
 		text-transform: none
-		margin: 0 0 20px 0
+		margin: 0 0 5px 0
+		padding-left: 25px
 		span						
 			background: #319900
 			font-family: 'OpenSansRegular', $helvetica			
@@ -206,6 +200,90 @@ body textarea:required:valid
 				height: 0
 				border: 13px solid transparent
 				border-right-color: #319900
-
+	p
+		line-height: 25px
+		color: #333
+		text-align: justify
+		padding: 0 25px 20px
+	.container
+		padding-left: 30px
+		padding-right: 30px
+		.row
+			// margin-left: -25px
+			// margin-right: -25px
+			.product
+				// height: 300px
+				background: #fff
+				margin-bottom: 10px
+				padding-bottom: 5px
+				border: 1px solid tint($text-color, 90%)
+				border-radius: 2px
+				transition: all .3s ease
+				margin-left: -5px
+				margin-right: -5px
+				text-align: center
+				position: relative
+				&:hover
+					border: 1px solid tint($text-color, 77%)
+					background: #fffbf1
+				.v_code,
+				.views
+					font-size: em(12px)
+					position: absolute
+					top: 0
+					left: 0
+					padding: 0 5px
+					line-height: normal
+					color: tint($text-color, 60%)
+					// background: #f1f1f1
+					border-radius: 1px 0 0 0
+					span
+						font-family: 'OpenSansSemiBold', $helvetica
+				.views
+					left: auto
+					right: 0
+					border-radius: 0 1px 0 0
+					i.ic-views
+						width: 14px
+						height: 11px
+						background-position: -220px 0
+						margin-right: 5px
+				img
+					margin-top: 35px
+					border: 1px solid tint($text-color, 90%)
+				h3
+					font-family: 'OpenSansRegular', $helvetica
+					font-size: em(16px)
+					text-transform: none
+					color: #33647e
+					// color: #407E9F
+					transition: all .3s ease
+					margin-top: 15px
+					cursor: pointer
+					&:hover
+						color: #407E9F
+				.dscr
+					text-align: center
+					font-size: em(14px)
+				.price
+					color: tint($main-color-green, 30%)
+					font-size: em(12px)
+					float: left
+					padding: 0 0 0 15px					
+					span
+						color: $main-color-green
+						display: block
+						font-size: em(45px)
+						font-family: 'OpenSansBold', $helvetica
+				button					
+					border: none
+					outline: 0
+					font-size: em(18px)
+					color: #fff					
+					background-color: #c70000
+					border-radius: 2px
+					padding: 7px 10px 7px 30px
+					float: right
+					margin-right: 12px
 
 /*--- END Tabs Каталог---*/
