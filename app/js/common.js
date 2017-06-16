@@ -192,4 +192,19 @@ $(function() {
 	
 	/*--- END Слайдер Slick.js ---*/
 
+	// $('.tab:checked + label').mouseover(function() {
+	// 	$('.dropdown_stendy').css('display','block');
+	// });
+
+	// $('.tab:checked + label').mouseout(function() {
+	// 	$('.dropdown_stendy').css('display','none');
+	// });
+
+	$('.tab:checked + label').hover(function() {
+		$('.dropdown_stendy').toggle();
+		// $('.dropdown_stendy').slideToggle();
+		// $('.dropdown_stendy').slideToggle();
+		// $('.dropdown_stendy').slideToggle();
+	});
+
 });
