@@ -220,6 +220,14 @@ body textarea:required:valid
 				background-position: -180px -262px
 			i.ic-stendy_pocket
 				background-position: -200px -262px
+		&:before
+			@extend .before
+			width: 18px
+			height: 9px						
+			background: url(../img/sprite.png) -200px -11px no-repeat
+			top: -8px
+			left: 69px			
+
 	ul.dropdown_tables
 		@extend .ulmenu
 		// width: 20%
@@ -315,9 +323,11 @@ body textarea:required:valid
 				margin-right: -5px
 				text-align: center
 				position: relative
+				box-shadow: 0 0 0
 				&:hover
 					border: 1px solid tint($text-color, 77%)
 					background: #fffbf1
+					box-shadow: 0px 0px 1px rgba(0,0,0,.3)
 				.v_code,
 				.views
 					font-size: em(12px)

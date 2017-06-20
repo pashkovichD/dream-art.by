@@ -200,11 +200,18 @@ $(function() {
 	// 	$('.dropdown_stendy').css('display','none');
 	// });
 
-	$('.tab:checked + label').hover(function() {
-		$('.dropdown_stendy').toggle();
-		// $('.dropdown_stendy').slideToggle();
-		// $('.dropdown_stendy').slideToggle();
-		// $('.dropdown_stendy').slideToggle();
-	});
+	/*$('.tab').click(function() {
+		if(!$(this).attr('checked')) {
+			$(this).attr('checked', true);
+			$('.tab').not($(this)).removeAttr('checked');
+		}		
+	});*/	
+
+	// $('.tab:checked + label').hover(function() {
+	// 	$('.dropdown_stendy').toggle();
+	// 	// $('.dropdown_stendy').slideToggle();
+	// 	// $('.dropdown_stendy').slideToggle();
+	// 	// $('.dropdown_stendy').slideToggle();
+	// });
 
 });
