@@ -313,19 +313,19 @@ body textarea:required:valid
 			.product
 				// height: 300px
 				background: #fff
-				margin-bottom: 10px
-				border: 1px solid tint($text-color, 90%)
+				margin-bottom: 30px
+				border: 1px solid tint($text-color, 80%)
 				// border: 1px solid transparent
 				// border-radius: 2px
 				transition: all .3s ease
-				margin-left: -5px
-				margin-right: -5px
+				// margin-left: -5px
+				// margin-right: -5px
 				text-align: center
 				position: relative
 				// box-shadow: 0 0 0
 				overflow: hidden
 				&:hover
-					border: 1px solid tint($text-color, 67%)
+					border: 1px solid tint($main-color-green, 10%)
 					background: #fffbf1
 					// box-shadow: 0px 0px 1px rgba(0,0,0,.3)
 				.v_code				
@@ -335,7 +335,7 @@ body textarea:required:valid
 					position: absolute
 					top: -1px
 					left: -1px
-					padding: 2px 7px
+					padding: 1px 7px
 					line-height: normal
 					// color: tint($text-color, 60%)
 					color: #fff
@@ -353,7 +353,7 @@ body textarea:required:valid
 				// 		height: 11px
 				// 		background-position: -220px 0
 				// 		margin-right: 5px
-				img
+				img 
 					margin-top: 35px
 					border: 1px solid tint($text-color, 90%)
 				h3
@@ -479,7 +479,28 @@ body textarea:required:valid
 
 					&:hover button
 						opacity: 1
-
+			.light
+				// border: 1px solid red
+				// .views
+				// 	position: absolute
+				// 	right: 0
+				// 	padding: 0 10px 0 0
+				// 	i.ic-views
+				// 		width: 15px
+				// 		height: 12px
+				// 		background-position: -219px 0
+				// 		margin-right: 3px
+				// 		position: relative
+				// 		top: -2px
+				// border: 1px solid tint($text-color, 80%)				
+				.product_desc
+					border-top: 3px solid #1c242c
+					background: tint($main-color-blue, 85%)
+					height: 30px
+					p
+						color: #333
+					button
+						border-top: 3px solid #1c242c
 
 				// button					
 				// 	border: 1px solid transparent
@@ -508,3 +529,28 @@ body textarea:required:valid
 
 
 /*--- END Tabs Каталог---*/
+
+.content_center
+	// height: 700px
+	padding: 0 25px 0 25px
+	display: flex;
+	justify-content: space-between
+	// align-items: baseline
+	// flex-direction: row-reverse
+	flex-wrap: wrap
+
+.product_card
+	width: 200px
+	height: 300px
+	border: 1px solid $main-color-green
+	background: tint($main-color-green, 50%)
+	color: #fff
+	margin-bottom: 30px
+	// margin-right: 30px
+	text-align: center
+	// vertical-align: middle
+	padding-top: 50px
+	font-size: em(50px)
+
+// .product_card:last-child
+// 	margin-right: 0
