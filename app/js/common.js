@@ -214,4 +214,8 @@ $(function() {
 	// 	// $('.dropdown_stendy').slideToggle();
 	// });
 
+	$('.product_desc button').click(function(){
+		
+	});
+
 });

@@ -353,9 +353,16 @@ body textarea:required:valid
 				// 		height: 11px
 				// 		background-position: -220px 0
 				// 		margin-right: 5px
-				img 
-					margin-top: 35px
-					border: 1px solid tint($text-color, 90%)
+				.img_wrap
+					width: 80%
+					height: 175px
+					margin: 40px auto 50px auto					
+					vertical-align: center
+					img 
+						width: 100%
+						height: auto
+						// margin-top: 35px
+						border: 1px solid tint($text-color, 90%)
 				h3
 					font-family: 'OpenSansRegular', $helvetica
 					font-size: em(16px)
@@ -413,6 +420,7 @@ body textarea:required:valid
 						background: tint(#e32d2c, 15%)
 						color: rgba(255,255,255,.4)
 						padding: 0 0 0 7px
+						transition: all .3s ease
 						span
 							color: #fff
 							font-size: em(25px)
@@ -431,21 +439,39 @@ body textarea:required:valid
 						font-size: em(16px)
 						text-align: left
 						margin: 0
-					p
+					.price_title
 						color: rgba(255,255,255,.9)
 						padding: 10px
 						text-align: center
 						letter-spacing: .5px
 						// position: absolute
 						// top: 30px
-						transition: all .3s ease
+						
 						margin-top: 30px
+						transition: all .3s ease
 						background: rgba(255,255,255,.1)
-					&:hover p
+						line-height: normal
+						span
+							display: none
+							// color: #999
+							color: rgba(255,255,255,.5)
+							font-size: em(14px)
+							letter-spacing: normal
+
+					&:hover .price_title
 						// top: 10px
-						margin-top: 0px
-						background: #fff
-						color: #000
+						margin-top: 0
+						padding-top: 0
+						padding-bottom: 3px						
+						background: #000
+						// color: #
+						color: #fff
+						span
+							display: block
+					&:hover .price_three
+						top: -36px
+					&:hover .price_three.old
+						top: -63px
 					button
 						font-size: em(18px)
 						border: none
@@ -479,6 +505,11 @@ body textarea:required:valid
 
 					&:hover button
 						opacity: 1
+				.product_wrap
+					background: rgba(0,0,0,.5)
+					position: absolute
+					top: 0
+					left: 0										
 			.light
 				// border: 1px solid red
 				// .views
@@ -494,13 +525,30 @@ body textarea:required:valid
 				// 		top: -2px
 				// border: 1px solid tint($text-color, 80%)				
 				.product_desc
-					border-top: 3px solid #1c242c
-					background: tint($main-color-blue, 85%)
-					height: 30px
-					p
-						color: #333
+					border-top: 1px solid #1c242c
+					// background: tint($main-color-blue, 85%)
+					background: #fff
+					// height: 70px
+					padding: 0
+					.price_title
+						color: #33647e
+						margin-top: 15px						
+						span
+							color: #999
+							display: block
+					&:hover .price_three
+						top: -37px
+					&:hover .price_title
+						margin-top: 5px
+						color: #33647e
+						background: #fff
+						span
+							color: #999							
 					button
 						border-top: 3px solid #1c242c
+						padding: 2px 0 5px 0
+						i.ic-cart
+							top: -5px
 
 				// button					
 				// 	border: 1px solid transparent
