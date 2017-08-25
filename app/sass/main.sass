@@ -326,7 +326,7 @@ body textarea:required:valid
 				overflow: hidden
 				&:hover
 					border: 1px solid tint($main-color-green, 10%)
-					background: #fffbf1
+					// background: #fffbf1
 					// box-shadow: 0px 0px 1px rgba(0,0,0,.3)
 				.v_code				
 					font-size: em(15px)
@@ -574,6 +574,54 @@ body textarea:required:valid
 				// 	// 	top: -3px
 				// 	// &:hover i.ic-btn_order
 				// 	// 	background-position: -114px -37px
+
+			.test
+				// border: 1px solid red
+				.shadow
+					position: absolute
+					left: 0
+					top: 0
+					width: 100%
+					height: 100%
+					background: rgba(0,0,0,.15)
+					opacity: 0
+					transition: 0.5s ease-in-out
+					z-index: 2
+				&:hover .shadow
+					opacity: 1
+				.actions
+					bottom: 15px
+					right: 15px
+					position: absolute
+					z-index: 3
+					a
+						background: #202020
+						color: white
+						display: block						
+						transition: .1s ease-in-out
+						text-decoration: none
+						padding: 7px 10px
+						font-family: 'OpenSansLight', $helvetica
+						&:hover
+							background: #FF7200
+					.add-to-cart, .order
+						opacity: 0
+						visibility: hidden
+						transform: translate(0,-30px)
+						margin: 9px 0 0						
+					.add-to-cart
+						transition: .6s ease-in-out
+					.order
+						transition: .4s ease-in-out
+				&:hover .add-to-cart,
+				&:hover .order
+					opacity: 1
+					visibility: visible
+					transform: translate(0,0)
+
+					
+
+
 
 
 /*--- END Tabs Каталог---*/
