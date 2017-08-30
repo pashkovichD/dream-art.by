@@ -310,55 +310,75 @@ body textarea:required:valid
 		.row
 			// margin-left: -25px
 			// margin-right: -25px
-			.product
-				// height: 300px
-				background: #fff
+			.product				
+				background: #f3f3f3
 				margin-bottom: 30px
 				border: 1px solid tint($text-color, 100%)
-				box-shadow: 0px 0px 1px rgba(0,0,0,.3)
-				// border: 1px solid transparent
-				// border-radius: 2px
-				transition: all .3s ease
-				// margin-left: -5px
-				// margin-right: -5px
+				box-shadow: 0px 0px 1px rgba(0,0,0,.3)				
+				transition: all .3s ease				
 				text-align: center
-				position: relative
-				// box-shadow: 0 0 0
+				position: relative				
 				overflow: hidden
-				&:hover
-					border: 1px solid tint($main-color-green, 10%)					
-					// background: #fffbf1
-					// box-shadow: 0px 0px 1px rgba(0,0,0,.3)
-				.v_code				
-					font-size: em(15px)
-					// letter-spacing: 1px
-					font-family: 'OpenSansLight', $helvetica
+				.shadow
 					position: absolute
-					// top: -1px
-					bottom: -1px
-					left: -1px
-					padding: 1px 7px
-					line-height: normal
-					// color: tint($text-color, 60%)
-					color: #fff
-					// background: $main-color-green
-					background: #00BA2F
-					border-radius: 1px 0 0 0
-					span
-						// font-family: 'OpenSansLight', $helvetica
-				// .views
-				// 	left: auto
-				// 	right: 0
-				// 	border-radius: 0 1px 0 0
-				// 	i.ic-views
-				// 		width: 14px
-				// 		height: 11px
-				// 		background-position: -220px 0
-				// 		margin-right: 5px
+					left: 0
+					top: 0
+					width: 100%
+					height: 100%					
+					// background: #339900
+					background: white
+					opacity: 0
+					transition: 0.5s ease-in-out
+					z-index: 2
+				&:hover .shadow
+					// opacity: .8				
+				&:hover
+					border: 1px solid tint($main-color-green, 10%)
+				&:hover .product_desc
+					// height: 150px
+				.actions
+					width: 200px
+					bottom: 145px
+					// right: 15px
+					left: 50%
+					margin-left: -100px
+					position: absolute
+					z-index: 3
+					a
+						// background: #202020
+						// background: #138808
+						// #319900
+						background: shade($main-color-green, 20%)
+						border: 3px double white
+						color: white
+						display: block						
+						transition: .3s ease-in-out
+						text-decoration: none
+						padding: 7px 10px
+						font-family: 'OpenSansLight', $helvetica
+						// font-family: 'Open Sans'
+						// font-weight: 300
+						&:hover
+							background: #194368
+							border-color: #194368
+					.add-to-cart, .order
+						opacity: 0
+						visibility: hidden
+						transform: translate(0,-30px)
+						margin: 9px 0 0						
+					.add-to-cart
+						transition: .6s ease-in-out
+					.order
+						transition: .4s ease-in-out
+				&:hover .add-to-cart,
+				&:hover .order
+					// opacity: 1
+					// visibility: visible
+					// transform: translate(0,0)				
 				.img_wrap
 					width: 80%
-					height: 175px
-					margin: 40px auto 50px auto					
+					// height: 175px
+					margin: 25px auto 30px auto					
 					vertical-align: center
 					img 
 						width: 100%
@@ -375,59 +395,54 @@ body textarea:required:valid
 					margin-top: 15px
 					cursor: pointer
 					&:hover
-						color: #407E9F				
-				// .dscr
-				// 	text-align: center
-				// 	font-size: em(14px)
-				// .price
-				// 	color: tint($main-color-green, 30%)
-				// 	font-size: em(12px)
-				// 	float: left
-				// 	padding: 0 0 0 15px					
-				// 	span
-				// 		color: $main-color-green
-				// 		display: block
-				// 		font-size: em(45px)
-				// 		font-family: 'OpenSansBold', $helvetica
-				// .price_two
-				// 	min-width: 70px					
-				// 	position: absolute
-				// 	bottom: 0
-				// 	right: 10px					
-				// 	background: tint(#e32d2c, 20%)
-				// 	padding-bottom: 2px
-				// 	p
-				// 		color: #fff
-				// 		padding: 2px 7px
-				// 		text-align: center
-				// 		&.count
-				// 			font-size: em(20px)
-				// 			background: #e32d2c
-				// 		&.money
-				// 			font-size: em(12px)
-				// 			line-height: normal
-				// 			padding: 0
+						color: #407E9F
 				.product_desc					
-					margin-top: 30px
-					background: #1c242c
+					// margin-top: 30px
+					background: white
+					border-top: 1px solid #00BA2F
 					color: #fff
 					position: relative					
 					padding: 3px 0 0 0
-					font-family: 'OpenSansRegular', $helvetica
-					height: 100px
-					.price_three					
-						position: absolute
-						bottom: 10px
-						right: 10px					
-						background: tint(#e32d2c, 15%)
-						color: rgba(255,255,255,.4)
+					font-family: 'OpenSansBold', $helvetica
+					// height: 100px
+					z-index: 100
+					.v_code				
+						font-size: em(15px)					
+						font-family: 'RobotoLight', $helvetica
+						// font-family: 'Open Sans'
+						position: absolute					
+						top: -22px
+						left: -1px
+						padding: 1px 7px
+						line-height: normal					
+						color: #aaa
+						background: #e7e7e7
+						// border: 1px solid #00BA2F
+						// border-radius: 1px 0 0 0
+						span
+							// font-family: 'OpenSansLight', $helvetica
+					// .views
+					// 	left: auto
+					// 	right: 0
+					// 	border-radius: 0 1px 0 0
+					// 	i.ic-views
+					// 		width: 14px
+					// 		height: 11px
+					// 		background-position: -220px 0
+					// 		margin-right: 5px
+					.price
+						// position: absolute
+						// bottom: 10px
+						// right: 10px					
+						// background: tint(#e32d2c, 15%)
+						color: tint(#e32d2c,40%)
 						padding: 0 0 0 7px
 						transition: all .3s ease
 						span
-							color: #fff
-							font-size: em(25px)
-							background: #e32d2c
-							padding: 0px 7px
+							color: #e32d2c
+							font-size: em(30px)
+							// background: #e32d2c
+							padding: 0
 						&.sale
 							background: tint(#00BA2F, 15%) !important
 							span
@@ -442,39 +457,31 @@ body textarea:required:valid
 						text-align: left
 						margin: 0
 					.price_title
-						color: rgba(255,255,255,.9)
-						padding: 10px
+						color: #33647e
+						padding: 5px 0
 						text-align: center
-						letter-spacing: .5px
-						// position: absolute
-						// top: 30px
-						
-						margin-top: 30px
+						letter-spacing: .5px						
 						transition: all .3s ease
 						background: rgba(255,255,255,.1)
 						line-height: normal
+						font-size: em(20px)
+						font-family: 'RobotoLight', $helvetica
 						span
 							display: none
-							// color: #999
-							color: rgba(255,255,255,.5)
-							font-size: em(14px)
+							color: #999
+							// color: rgba(255,255,255,.5)
+							font-size: em(12px)
 							letter-spacing: normal
 							font-family: 'OpenSansLight', $helvetica
 
 					&:hover .price_title
-						// top: 10px
-						margin-top: 0
-						padding-top: 0
-						padding-bottom: 3px						
-						background: #000
-						// color: #
-						color: #fff
+						
 						span
-							display: block
-					&:hover .price_three
-						top: -36px
-					&:hover .price_three.old
-						top: -63px
+							// display: block
+					&:hover .price
+						// top: -36px
+					&:hover .price.old
+						// top: -63px
 					button
 						font-size: em(18px)
 						border: none
@@ -505,87 +512,6 @@ body textarea:required:valid
 							top: -6px
 						&:hover
 							background: tint(#ff7200, 30%)
-
-					&:hover button
-						opacity: 1				
-			
-
-			.test
-				// border: 1px solid red
-				.shadow
-					position: absolute
-					left: 0
-					top: 0
-					width: 100%
-					height: 100%
-					background: rgba(0,0,0,.5)
-					opacity: 0
-					transition: 0.5s ease-in-out
-					z-index: 2
-				&:hover .shadow
-					opacity: 1
-					// opacity: 1
-				.actions
-					bottom: 15px
-					right: 15px
-					position: absolute
-					z-index: 3
-					a
-						background: #202020
-						color: white
-						display: block						
-						transition: .1s ease-in-out
-						text-decoration: none
-						padding: 7px 10px
-						font-family: 'OpenSansLight', $helvetica
-						&:hover
-							background: #FF7200
-					.add-to-cart, .order
-						opacity: 0
-						visibility: hidden
-						transform: translate(0,-30px)
-						margin: 9px 0 0						
-					.add-to-cart
-						transition: .6s ease-in-out
-					.order
-						transition: .4s ease-in-out
-				&:hover .add-to-cart,
-				&:hover .order
-					opacity: 1
-					visibility: visible
-					transform: translate(0,0)
-				.product_desc
-					// border-top: 1px solid #1c242c
-					// background: tint($main-color-blue, 85%)
-					background: #fff					
-					// height: 70px
-					padding: 0
-					.price_title
-						color: #33647e
-						margin-top: 15px						
-						// text-align: left
-						padding: 10px 10px 10px 30px
-						span
-							color: #999
-							display: block
-					&:hover .price_three
-						top: -37px
-					&:hover .price_title
-						margin-top: 5px
-						color: #33647e
-						background: #fff
-						span
-							color: #999							
-					button
-						border-top: 3px solid #1c242c
-						padding: 2px 0 5px 0
-						i.ic-cart
-							top: -5px
-
-
-					
-
-
 
 
 /*--- END Tabs Каталог---*/
