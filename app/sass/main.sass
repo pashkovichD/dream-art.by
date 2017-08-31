@@ -314,10 +314,10 @@ body textarea:required:valid
 				background: #f3f3f3
 				margin-bottom: 30px
 				border: 1px solid tint($text-color, 100%)
-				box-shadow: 0px 0px 1px rgba(0,0,0,.3)				
-				transition: all .3s ease				
+				box-shadow: 0px 0px 1px rgba(0,0,0,.3)
+				transition: all .3s ease
 				text-align: center
-				position: relative				
+				position: relative
 				overflow: hidden
 				.shadow
 					position: absolute
@@ -335,7 +335,7 @@ body textarea:required:valid
 				&:hover
 					border: 1px solid tint($main-color-green, 10%)
 				&:hover .product_desc
-					// height: 150px
+					
 				.actions
 					width: 200px
 					bottom: 145px
@@ -377,7 +377,7 @@ body textarea:required:valid
 					// transform: translate(0,0)				
 				.img_wrap
 					width: 80%
-					// height: 175px
+					height: auto					
 					margin: 25px auto 30px auto					
 					vertical-align: center
 					img 
@@ -399,15 +399,14 @@ body textarea:required:valid
 				.product_desc					
 					// margin-top: 30px
 					background: white
-					border-top: 1px solid #00BA2F
+					border-top: 1px solid #e0e0e0
 					color: #fff
 					position: relative					
 					padding: 3px 0 0 0
-					font-family: 'OpenSansBold', $helvetica
-					// height: 100px
+					font-family: 'OpenSansLight', $helvetica					
 					z-index: 100
 					.v_code				
-						font-size: em(15px)					
+						font-size: em(13px)					
 						font-family: 'RobotoLight', $helvetica
 						// font-family: 'Open Sans'
 						position: absolute					
@@ -415,33 +414,32 @@ body textarea:required:valid
 						left: -1px
 						padding: 1px 7px
 						line-height: normal					
-						color: #aaa
-						background: #e7e7e7
-						// border: 1px solid #00BA2F
-						// border-radius: 1px 0 0 0
+						color: white
+						background: #aaa
+						border-top: 1px solid #e0e0e0						
+						
+					.price_title
+						color: #33647e
+						padding: 5px 0 0 0
+						text-align: center
+						letter-spacing: .5px						
+						transition: all .3s ease
+						background: rgba(255,255,255,.1)
+						line-height: normal
+						font-size: em(18px)
+						font-family: 'OpenSansRegular', $helvetica
 						span
-							// font-family: 'OpenSansLight', $helvetica
-					// .views
-					// 	left: auto
-					// 	right: 0
-					// 	border-radius: 0 1px 0 0
-					// 	i.ic-views
-					// 		width: 14px
-					// 		height: 11px
-					// 		background-position: -220px 0
-					// 		margin-right: 5px
+							display: block
+							color: #999							
+							font-size: em(12px)
+							letter-spacing: normal
+							font-family: 'OpenSansLight', $helvetica
 					.price
-						// position: absolute
-						// bottom: 10px
-						// right: 10px					
-						// background: tint(#e32d2c, 15%)
-						color: tint(#e32d2c,40%)
-						padding: 0 0 0 7px
+						color: tint(#ff0000,40%)						
 						transition: all .3s ease
 						span
-							color: #e32d2c
-							font-size: em(30px)
-							// background: #e32d2c
+							color: #ff0000
+							font-size: em(30px)							
 							padding: 0
 						&.sale
 							background: tint(#00BA2F, 15%) !important
@@ -456,23 +454,6 @@ body textarea:required:valid
 						font-size: em(16px)
 						text-align: left
 						margin: 0
-					.price_title
-						color: #33647e
-						padding: 5px 0
-						text-align: center
-						letter-spacing: .5px						
-						transition: all .3s ease
-						background: rgba(255,255,255,.1)
-						line-height: normal
-						font-size: em(20px)
-						font-family: 'RobotoLight', $helvetica
-						span
-							display: none
-							color: #999
-							// color: rgba(255,255,255,.5)
-							font-size: em(12px)
-							letter-spacing: normal
-							font-family: 'OpenSansLight', $helvetica
 
 					&:hover .price_title
 						
