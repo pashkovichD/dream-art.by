@@ -331,11 +331,13 @@ body textarea:required:valid
 					transition: 0.5s ease-in-out
 					z-index: 2
 				&:hover .shadow
-					// opacity: .8				
+					opacity: .8
 				&:hover
 					border: 1px solid tint($main-color-green, 10%)
-				&:hover .product_desc
-					
+				&:hover .product_desc .price
+					padding-top: 5px
+					padding-bottom: 10px				
+				
 				.actions
 					width: 200px
 					bottom: 145px
@@ -372,18 +374,16 @@ body textarea:required:valid
 						transition: .4s ease-in-out
 				&:hover .add-to-cart,
 				&:hover .order
-					// opacity: 1
-					// visibility: visible
-					// transform: translate(0,0)				
+					opacity: 1
+					visibility: visible
+					transform: translate(0,0)
 				.img_wrap
 					width: 80%
 					height: auto					
-					margin: 25px auto 30px auto					
-					vertical-align: center
+					margin: 25px auto 120px auto
 					img 
 						width: 100%
-						height: auto
-						// margin-top: 35px
+						height: 175px
 						border: 1px solid tint($text-color, 90%)
 				h3
 					font-family: 'OpenSansRegular', $helvetica
@@ -401,29 +401,35 @@ body textarea:required:valid
 					background: white
 					border-top: 1px solid #e0e0e0
 					color: #fff
-					position: relative					
+					position: absolute
+					left: 0
+					bottom: 0
+					width: 100%	
+					// transition: .3s ease-in-out				
 					padding: 3px 0 0 0
 					font-family: 'OpenSansLight', $helvetica					
 					z-index: 100
 					.v_code				
-						font-size: em(13px)					
-						font-family: 'RobotoLight', $helvetica
-						// font-family: 'Open Sans'
+						font-size: em(12px)					
+						font-family: 'RobotoLight', $helvetica						
 						position: absolute					
-						top: -22px
-						left: -1px
+						top: -9px
+						left: 0
 						padding: 1px 7px
-						line-height: normal					
-						color: white
-						background: #aaa
-						border-top: 1px solid #e0e0e0						
+						line-height: 15px
+						background: #d6d6d6
+						// color: $main-color-green
+						// border: 1px solid tint($main-color-green, 10%)
+						border-left-width: 0
+						border-right-width: 0						
+						// border-bottom: 1px solid #e0e0e0						
 						
 					.price_title
 						color: #33647e
-						padding: 5px 0 0 0
+						padding: 10px 0 0 0
 						text-align: center
 						letter-spacing: .5px						
-						transition: all .3s ease
+						transition: .3s ease-in-out
 						background: rgba(255,255,255,.1)
 						line-height: normal
 						font-size: em(18px)
@@ -454,45 +460,46 @@ body textarea:required:valid
 						font-size: em(16px)
 						text-align: left
 						margin: 0
+					
 
-					&:hover .price_title
+					// &:hover .price_title
 						
-						span
-							// display: block
-					&:hover .price
-						// top: -36px
-					&:hover .price.old
-						// top: -63px
-					button
-						font-size: em(18px)
-						border: none
-						outline: 0
-						width: 100%
-						margin-top: 3px
-						padding: 6px 0 5px 0
-						background: #ff7200
-						opacity: 0
-						transition: all .7s	ease
-						position: relative
-						&:after
-							content: ''
-							position: absolute
-							left: 50%
-							top: 0
-							width: 0
-							height: 0
-							border: 6px solid transparent
-							border-top-color: #1c242c
+					// 	span
+					// 		// display: block
+					// &:hover .price
+					// 	// top: -36px
+					// &:hover .price.old
+					// 	// top: -63px
+					// button
+					// 	font-size: em(18px)
+					// 	border: none
+					// 	outline: 0
+					// 	width: 100%
+					// 	margin-top: 3px
+					// 	padding: 6px 0 5px 0
+					// 	background: #ff7200
+					// 	opacity: 0
+					// 	transition: all .7s	ease
+					// 	position: relative
+					// 	&:after
+					// 		content: ''
+					// 		position: absolute
+					// 		left: 50%
+					// 		top: 0
+					// 		width: 0
+					// 		height: 0
+					// 		border: 6px solid transparent
+					// 		border-top-color: #1c242c
 
-						i.ic-cart
-							width: 28px
-							height: 34px
-							background-position: -87px -37px
-							margin-right: 10px
-							position: relative
-							top: -6px
-						&:hover
-							background: tint(#ff7200, 30%)
+					// 	i.ic-cart
+					// 		width: 28px
+					// 		height: 34px
+					// 		background-position: -87px -37px
+					// 		margin-right: 10px
+					// 		position: relative
+					// 		top: -6px
+					// 	&:hover
+					// 		background: tint(#ff7200, 30%)
 
 
 /*--- END Tabs Каталог---*/
