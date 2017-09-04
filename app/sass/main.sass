@@ -315,7 +315,7 @@ body textarea:required:valid
 				margin-bottom: 30px
 				border: 1px solid tint($text-color, 100%)
 				box-shadow: 0px 0px 1px rgba(0,0,0,.3)
-				transition: all .3s ease
+				transition: all .1s ease
 				text-align: center
 				position: relative
 				overflow: hidden
@@ -334,10 +334,46 @@ body textarea:required:valid
 					opacity: .8
 				&:hover
 					border: 1px solid tint($main-color-green, 10%)
-				&:hover .product_desc .price
-					padding-top: 5px
-					padding-bottom: 10px				
+				// &:hover .product_desc .price
+				// 	padding-top: 5px
+				// 	padding-bottom: 10px
+				&:hover .views
+					left: 20px
+				&:hover .orders
+					right: 20px
 				
+				.views, .orders
+					position: absolute
+					top: 20px
+					font-size: em(14px)
+					z-index: 100
+					color: #999
+					transition: 0.2s ease-in-out
+					background: white
+					padding: 5px 10px
+					height: 30px					
+				.views					
+					// left: 20px				
+					left: -100px				
+					i.ic-views
+						width: 18px
+						height: 13px
+						background-position: -219px 0
+						margin-right: 7px
+						position: relative
+						top: -2px
+						
+				.orders
+					// right: 20px					
+					right: -100px					
+					i.ic-orders
+						width: 24px
+						height: 24px
+						background-position: -219px -14px
+						margin-left: 7px
+						position: relative
+						top: -2px
+
 				.actions
 					width: 200px
 					bottom: 145px
@@ -351,18 +387,22 @@ body textarea:required:valid
 						// background: #138808
 						// #319900
 						background: shade($main-color-green, 20%)
-						border: 3px double white
+						// border: 3px double white
+						border: 1px solid transparent
 						color: white
 						display: block						
-						transition: .3s ease-in-out
+						transition: .2s ease-in-out
 						text-decoration: none
 						padding: 7px 10px
 						font-family: 'OpenSansLight', $helvetica
 						// font-family: 'Open Sans'
 						// font-weight: 300
 						&:hover
-							background: #194368
-							border-color: #194368
+							// background: #194368
+							// border-color: #194368
+							background: tint($main-color-green, 10%)
+							border-color: shade($main-color-green, 20%)
+							// color: shade($main-color-green, 20%)
 					.add-to-cart, .order
 						opacity: 0
 						visibility: hidden
@@ -372,6 +412,13 @@ body textarea:required:valid
 						transition: .6s ease-in-out
 					.order
 						transition: .4s ease-in-out
+						// background: url(../img/sprite.png) no-repeat												
+						a
+							background: #33647e url(../img/icons/cart.png) 35px center no-repeat
+							&:hover
+								background: tint($main-color-green, 10%) url(../img/icons/cart.png) 35px center no-repeat
+								border-color: #33647e
+
 				&:hover .add-to-cart,
 				&:hover .order
 					opacity: 1
@@ -442,19 +489,29 @@ body textarea:required:valid
 							font-family: 'OpenSansLight', $helvetica
 					.price
 						color: tint(#ff0000,40%)						
-						transition: all .3s ease
+						// transition: all .3s ease
+						padding-bottom: 3px
+						font-family: 'RobotoLight', $helvetica
 						span
 							color: #ff0000
-							font-size: em(30px)							
+							font-size: em(28px)							
 							padding: 0
 						&.sale
 							background: tint(#00BA2F, 15%) !important
 							span
 								background: #00BA2F
-						&.old
-							top: -47px
+						.old
+							display: inline
+							// top: -47px
 							text-decoration: line-through
-							font-size: em(12px)
+							font-size: em(16px)
+							margin-right: 10px
+							color: tint($main-color-green, 0%)
+							font-family: 'RobotoLight', $helvetica
+							span
+								font-size: inherit
+								color: inherit
+
 					h3
 						color: #fff						
 						font-size: em(16px)
