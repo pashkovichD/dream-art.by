@@ -121,10 +121,40 @@
 	.tab__content 
 		.container 
 			.row 
-				.product 
+				.product
+					.views, .orders
+						top: 15px
+					.views
+						// left: 15px
+					.orders
+						// right: 15px
+					&:hover .views
+						left: 15px
+					&:hover .orders
+						right: 15px
+					.actions
+						width: 160px
+						margin-left: -80px
+						bottom: 120px
+						a
+							font-size: em(14px)
+						.order
+							a
+								background: #33647e url(../img/icons/cart_mini.png) 24px 7px no-repeat
+								&:hover
+									background: tint($main-color-green, 10%) url(../img/icons/cart_mini.png) 24px 7px no-repeat									
 					.img_wrap
-						margin: 15px auto 115px auto				
-						.testxxx
+						margin: 15px auto 100px auto				
+					.product_desc 
+						.v_code
+							font-size: em(11px)
+						.price_title
+							padding-top: 7px
+							font-size: em(16px)
+						.price
+							span
+								font-size: em(23px)	
+
 
 
 /* Small Devices, Tablets */
@@ -205,6 +235,17 @@
 				background: #fff
 				color: #50bbdb
 				padding: 0px 7px
+	.tab__content 
+		.container 
+			.row 
+				.product				
+					&:nth-child(1)
+						margin: 0 30px 30px 60px
+						outline: 5px solid red
+					// &:nth-child(even)
+					// 	margin: 0 50px 30px 30px
+
+
 
 
 /* Свой размер */
