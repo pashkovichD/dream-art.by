@@ -118,7 +118,19 @@
 				background-position: -25px -123px			
 				top: 0
 
-	.tab__content 
+	.tab__content
+		h1
+			font-size: em(30px)
+			line-height: em(20px) 
+			span
+				font-size: 15px
+				top: -2px
+				&:after
+					border-width: 10px
+					left: -20px
+		p
+			font-size: em(15px)
+			line-height: 22px			
 		.container 
 			.row 
 				.product
@@ -235,17 +247,12 @@
 				background: #fff
 				color: #50bbdb
 				padding: 0px 7px
-	.tab__content 
+	.tab__content		
 		.container 
-			.row 
-				.product				
-					&:nth-child(1)
-						margin: 0 30px 30px 60px
-						outline: 5px solid red
-					// &:nth-child(even)
-					// 	margin: 0 50px 30px 30px
-
-
+			.row
+				.product
+					width: 85%
+					margin: 0 auto 30px auto
 
 
 /* Свой размер */
@@ -272,6 +279,24 @@
 				bottom: 10px
 				font-size: em(13px)
 				line-height: 16px
+	.tab__content
+		h1
+			font-size: em(22px)
+			margin-top: 5px
+			margin-bottom: 10px
+			span
+				font-size: 13px
+				top: -1px
+				&:after
+					border-width: 9px
+					left: -18px
+		p
+			font-size: em(14px)
+		.container 
+			.row
+				.product
+					width: 100%					
+					margin: 0 auto 13px auto
 
 
 
@@ -337,6 +362,26 @@
 				bottom: 3%
 			p
 				display: none
+	.tab__content
+		h1
+			font-size: em(18px)
+			margin-top: 5px
+			margin-bottom: 10px
+			span
+				// font-size: 12px				
+				top: -1px
+				margin-left: 15px
+		p
+			font-size: em(13px)
+			line-height: 18px			
+
+		.container 
+			.row
+			.row .col-xs-6
+				width: 100%
+				.product
+					width: 70%
+					
 
 
 /* Свой размер */
@@ -352,6 +397,14 @@
 				width: 100%
 			button
 				display: none
+	.tab__content		
+		.container 
+			.row
+			.row .col-xs-6
+				width: 100%
+				.product
+					width: 85%
+					// outline: 5px solid red
 
 
 /* Custom, iPhone Retina */
