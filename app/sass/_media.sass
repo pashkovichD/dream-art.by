@@ -36,21 +36,21 @@
 		min-width: 295px		
 		float: right
 		text-align: right		
-		background-color: #fff
+		// background-color: #fff
 		box-shadow: 1px 1px 2px rgba(0,0,0,0.3)
 		position: absolute		
 		top: 70px
 		right: 5px
 		ul
-			border-top: 3px solid #232D3B
-			border-bottom: 3px solid #232D3B
+			border-top: 1px solid #232D3B
+			border-bottom: 1px solid #232D3B
 			li
 				display: block
 				height: 48px
 				line-height: 0
 				padding: 0
 				// background: #fff
-				background: #1C242C
+				background: rgba(28,36,44,0.7)
 				transition: all .3s ease
 				a
 					display: block
@@ -121,12 +121,49 @@
 	.tab + label
 		height: 40px	
 		padding: 10px
-		font-size: 14px
+		font-size: 14px		
+		i.ic-stendy,
+		i.ic-tables,
+		i.ic-plexiglass
+			width: 29px
+			height: 31px
+			background-position: -115px -150px
+			top: -6px
+			margin-right: 7px
+		i.ic-tables
+			background-position: -145px -150px
+		i.ic-plexiglass
+			background-position: -175px -150px
+		&:hover		
+			i.ic-stendy
+				background-position: -115px -180px
+			i.ic-tables
+				background-position: -145px -180px
+			i.ic-plexiglass
+				background-position: -175px -180px
+
 	.tab:checked + label 
 		i.ic-stendy
-			background-position: -115px -204px
+			background-position: -115px -210px
 			width: 29px
-			height: 33px
+			height: 31px
+		i.ic-tables
+			background-position: -145px -210px
+		i.ic-plexiglass
+			background-position: -175px -210px
+		&:hover
+			i.ic-stendy
+				background-position: -115px -210px
+			i.ic-tables
+				background-position: -145px -210px
+			i.ic-plexiglass
+				background-position: -175px -210px
+		&:before
+			width: 14px
+			height: 6px
+			background-position: -200px -21px
+			margin-left: -7px
+
 
 	.tab__content
 		h1
@@ -256,7 +293,17 @@
 				display: inline-block
 				background: #fff
 				color: #50bbdb
-				padding: 0px 7px
+				// padding: 0px 7px
+	
+	.tab + label		
+		font-size: 12px	
+		letter-spacing: .5px
+		height: 36px
+		i.ic-stendy,
+		i.ic-tables,
+		i.ic-plexiglass
+			top: -8px
+
 	.tab__content		
 		.container 
 			.row
