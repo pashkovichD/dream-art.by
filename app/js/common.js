@@ -207,11 +207,26 @@ $(function() {
 		}		
 	});	
 
-	$('.tab:checked + label').hover(function() {
+	/*$('.tab:checked + label').hover(function() {
 		$('.dropdown_stendy').toggle();
 		// $('.dropdown_stendy').slideToggle();
 		// $('.dropdown_stendy').slideToggle();
 		// $('.dropdown_stendy').slideToggle();
-	});
+	});*/
+
+	/*$('.tab + label').click(function() {
+		if($('.tab').attr('checked') == 'checked') {
+			alert('OK');	
+		}
+	});*/
 	
+
+	/*$('.tab + label').hover(function() {
+		// alert('OK');		
+		// $('.dropdown_stendy').toggle();
+		// $('.dropdown_stendy').slideToggle();
+		// $('.dropdown_stendy').slideToggle();
+		// $('.dropdown_stendy').slideToggle();
+	});*/
+
 });

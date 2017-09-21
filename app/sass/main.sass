@@ -120,7 +120,45 @@ body textarea:required:valid
 		top: auto
 		bottom: 0
 		left: 50%
-		margin-left: -9px	
+		margin-left: -9px
+	.toggle-menu-arrow
+		width: 15px
+		span
+			position: absolute		
+			top: 50%
+			right: 7px
+			display: block
+			width: 100%
+			height: 1px
+			margin: 0
+			border: none
+			cursor: pointer
+			background: #98CC80
+			// color: white
+			// font-size: 0
+			transition: transform 0.35s
+			&:before, &:after
+				position: absolute
+				top: 0
+				left: 50%
+				display: block
+				width: 100%
+				height: 1px
+				background: #98CC80
+				content: ""
+				transition: transform 0.35s
+				// transform-origin: 100% 0%
+			&:before
+	 			transform: translate(-50%, -4px)
+			&:after
+				transform: translate(-50%, 4px)
+		// &:hover span
+		// 	transform: rotate(90deg)
+		// 	background: transparent
+		// &:hover span:before
+		// 	transform: translate(-50%, -3px) rotate(45deg) scaleX(0.7)
+		// &:hover span:after
+		// 	transform: translate(-50%, 4px) rotate(-45deg) scaleX(0.7)	
 
 .tab:checked + label:hover	
 	color: #fff
@@ -144,7 +182,8 @@ body textarea:required:valid
 	text-align: center
 	transition: 0.3s background-color ease, 0.3s box-shadow ease
 	height: 50px	
-	padding: 15px
+	padding: 15px 30px 15px 15px
+	position: relative
 	i.ic-stendy,
 	i.ic-tables,
 	i.ic-plexiglass
@@ -159,6 +198,8 @@ body textarea:required:valid
 		background-position: -38px -151px
 	i.ic-plexiglass
 		background-position: -76px -151px
+	
+
 	ul.dropdown_stendy
 		@extend .ulmenu
 		// width: 250px
