@@ -99,6 +99,18 @@ body textarea:required:valid
 	transform: translateY(0px)
 	text-shadow: 0 0 0
 
+.tab-arrow::after
+	@extend .before
+	width: 18px
+	height: 8px
+	background: url(../img/sprite.png) -200px -11px no-repeat	
+	z-index: 3
+	position: absolute		
+	top: auto
+	bottom: 0
+	left: 50%
+	margin-left: -9px	
+
 .tab:checked + label
 	background: url(../img/bg_menu_catalog.jpg) repeat-x	
 	text-shadow: 0 1px 1px rgba(0,0,0,.5)
@@ -122,43 +134,64 @@ body textarea:required:valid
 		left: 50%
 		margin-left: -9px
 	.toggle-menu-arrow
+		cursor: pointer
+		// background: green
+		position: absolute		
+		top: 50%
+		right: 8px
 		width: 15px
+		height: 14px
+		margin-top: -6px
 		span
-			position: absolute		
-			top: 50%
-			right: 7px
+			width: 15px
+			position: relative
+			top: 50%			
+			right: 0
 			display: block
-			width: 100%
+			// width: 100%
 			height: 1px
-			margin: 0
+			margin: -1px 0 0 0
 			border: none
-			cursor: pointer
+			
 			background: #98CC80
+			// background: red
 			// color: white
 			// font-size: 0
-			transition: transform 0.35s
+			transition: transform 0.35s			
 			&:before, &:after
-				position: absolute
-				top: 0
-				left: 50%
-				display: block
-				width: 100%
+				width: 15px				
+				// top: 0
+				// left: 50%
+				// right: -7px
+				display: block				
+				// width: 100%
 				height: 1px
 				background: #98CC80
+				// background: red
 				content: ""
 				transition: transform 0.35s
 				// transform-origin: 100% 0%
 			&:before
-	 			transform: translate(-50%, -4px)
+	 			transform: translate(0%, -4px)
 			&:after
-				transform: translate(-50%, 4px)
-		// &:hover span
-		// 	transform: rotate(90deg)
-		// 	background: transparent
-		// &:hover span:before
-		// 	transform: translate(-50%, -3px) rotate(45deg) scaleX(0.7)
-		// &:hover span:after
-		// 	transform: translate(-50%, 4px) rotate(-45deg) scaleX(0.7)	
+				transform: translate(0%, 3px)
+	// &:hover span
+	// 	transform: rotate(90deg)
+	// 	background: transparent
+	// &:hover span:before
+	// 	transform: translate(-0%, -3px) rotate(45deg) scaleX(0.7)
+	// &:hover span:after
+	// 	transform: translate(-0%, 3px) rotate(-45deg) scaleX(0.7)	
+	.tma-click
+		span
+			transform: rotate(90deg)
+			background: transparent
+		span:before
+			// transform: translate(-0%, -3px) rotate(45deg) scaleX(0.7)
+			transform: translate(-0%, 2px) rotate(45deg)
+		span:after
+			// transform: translate(-0%, 3px) rotate(-45deg) scaleX(0.7)
+			transform: translate(-0%, 1px) rotate(-45deg)
 
 .tab:checked + label:hover	
 	color: #fff
@@ -200,14 +233,11 @@ body textarea:required:valid
 		background-position: -76px -151px
 	
 
-	ul.dropdown_stendy
-		@extend .ulmenu
-		// width: 250px
-		// height: 200px
+	ul.dropdown_stendy, ul.dropdown_tables, ul.dropdown_plexiglass
+		@extend .ulmenu		
 		font-family: 'OpenSansLight', $helvetica
 		text-transform: none
-		text-shadow: 0 0 0
-		color: #4d4319
+		text-shadow: 0 0 0		
 		font-size: em(15px)
 		text-align: left
 		padding: 10px
@@ -218,73 +248,84 @@ body textarea:required:valid
 		top: 50px
 		z-index: 2
 		box-shadow: 1px 1px 3px rgba(0,0,0,.3)
-		li
-			width: 280px
+		width: 320px
+		letter-spacing: 0px		
+		li			
+			width: 100%
 			padding: 5px 10px
 			transition: all .1s ease
+			position: relative
+			cursor: pointer
 			&:hover
-				background: #ffe788			
-			i.ic-stendy_inform,
-			i.ic-stendy_pokup,
-			i.ic-stendy_window,
-			i.ic-stendy_fire,
-			i.ic-stendy_work,
-			i.ic-stendy_school,
-			i.ic-stendy_child,
-			i.ic-stendy_symbol,
-			i.ic-stendy_org,
-			i.ic-stendy_system,
-			i.ic-stendy_pocket
-				width: 20px
-				height: 20px				
-				background-position: 0 -262px
-				margin-right: 12px
-				position: relative
-				top: -2px
-			i.ic-stendy_pokup
-				background-position: -20px -262px
-			i.ic-stendy_window
-				background-position: -40px -262px
-			i.ic-stendy_fire
-				background-position: -60px -262px
-			i.ic-stendy_work
-				background-position: -80px -262px
-			i.ic-stendy_school
-				background-position: -100px -262px
-			i.ic-stendy_child
-				background-position: -120px -262px
-			i.ic-stendy_symbol
-				background-position: -140px -262px
-			i.ic-stendy_org
-				background-position: -160px -262px
-			i.ic-stendy_system
-				background-position: -180px -262px
-			i.ic-stendy_pocket
-				background-position: -200px -262px
-		&:before
-			@extend .before
-			width: 18px
-			height: 9px						
-			background: url(../img/sprite.png) -200px -11px no-repeat
-			top: -8px
-			left: 69px			
+				background: #ffe788				
+			a
+				text-decoration: none
+				color: #4d4319	
+				i.ic-arrow
+					width: 7px
+					height: 11px		
+					background-position: -119px -250px
+					position: absolute
+					top: 50%
+					right: 10px				
+					margin-top: -4px
+				i.ic-stendy_inform,
+				i.ic-stendy_pokup,
+				i.ic-stendy_window,
+				i.ic-stendy_fire,
+				i.ic-stendy_work,
+				i.ic-stendy_school,
+				i.ic-stendy_child,
+				i.ic-stendy_symbol,
+				i.ic-stendy_org,
+				i.ic-stendy_system,
+				i.ic-stendy_pocket
+					width: 20px
+					height: 20px				
+					background-position: 0 -262px
+					margin-right: 12px
+					position: relative
+					top: -2px
+				i.ic-stendy_pokup
+					background-position: -20px -262px
+				i.ic-stendy_window
+					background-position: -40px -262px
+				i.ic-stendy_fire
+					background-position: -60px -262px
+				i.ic-stendy_work
+					background-position: -80px -262px
+				i.ic-stendy_school
+					background-position: -100px -262px
+				i.ic-stendy_child
+					background-position: -120px -262px
+				i.ic-stendy_symbol
+					background-position: -140px -262px
+				i.ic-stendy_org
+					background-position: -160px -262px
+				i.ic-stendy_system
+					background-position: -180px -262px
+				i.ic-stendy_pocket
+					background-position: -200px -262px
+			ul
+				display: none
+				position: absolute
+				background: #4d4319
+				left: 100%
+				top: 0
+				width: 100%	
+
+				a
+					color: #fff	
+			&:hover 				
+				ul
+					display: block
+
 
 	ul.dropdown_tables
-		@extend .ulmenu
-		// width: 20%
-		// height: 200px
-		background: #ffdd55
-		display: none
-		position: absolute
-		z-index: 2
+		
+
 	ul.dropdown_plexiglass
-		@extend .ulmenu
-		// width: auto
-		// height: 200px
-		background: #ffdd55
-		display: none
-		position: absolute
-		z-index: 2
+		
 
 .tab + label:hover
 	color: #319900	
