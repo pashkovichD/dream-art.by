@@ -206,11 +206,14 @@ $(function() {
 			// $('.dropdown_stendy').slideUp(100);			
 	});
 
-	$('.dropdown_tables > li').hover(function() {		
-		// if($(this).children('ul')) {
-		// 	$(this).children('ul').css('display', 'block');
-		// }
-	});
+	$('.tab + label > ul li').click(function(e) {
+		e.preventDefault();		
+		if($(this).children('ul').length != 0) {			
+			// $(this).parent().css('display', 'block');
+			$(this).parent().css('outline', '3px solid red');
+			$(this).children('ul').toggle();
+		}
+	});	
 
 	// $('.tma-click').on('click', function() {
 	// 	alert('Yes');

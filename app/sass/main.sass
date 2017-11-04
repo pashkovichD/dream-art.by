@@ -234,7 +234,7 @@ body textarea:required:valid
 	
 
 	ul.dropdown_stendy, ul.dropdown_tables, ul.dropdown_plexiglass
-		@extend .ulmenu		
+		@extend .ulmenu
 		font-family: 'OpenSansLight', $helvetica
 		text-transform: none
 		text-shadow: 0 0 0		
@@ -249,7 +249,7 @@ body textarea:required:valid
 		z-index: 2
 		box-shadow: 1px 1px 3px rgba(0,0,0,.3)
 		width: 320px
-		letter-spacing: 0px		
+		letter-spacing: 0.3px		
 		li			
 			width: 100%
 			padding: 5px 10px
@@ -266,9 +266,9 @@ body textarea:required:valid
 					height: 11px		
 					background-position: -119px -250px
 					position: absolute
-					top: 50%
+					top: 16px
 					right: 10px				
-					margin-top: -4px
+					margin-top: -5px
 				i.ic-stendy_inform,
 				i.ic-stendy_pokup,
 				i.ic-stendy_window,
@@ -309,16 +309,26 @@ body textarea:required:valid
 			ul
 				display: none
 				position: absolute
-				background: #4d4319
+				background: #4d4319				
 				left: 100%
 				top: 0
 				width: 100%	
-
-				a
-					color: #fff	
-			&:hover 				
-				ul
-					display: block
+				padding: 5px				
+				li					
+					transition: all .1s ease
+					i.ic-submenu
+						width: 5px
+						height: 5px		
+						background-position: -127px -250px						
+						margin-top: -3px
+						margin-right: 10px
+					a
+						color: #fff
+					&:hover
+						background: #716947	
+			// &:hover 				
+			// 	ul
+			// 		display: block
 
 
 	ul.dropdown_tables
