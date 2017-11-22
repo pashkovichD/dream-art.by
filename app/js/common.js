@@ -207,6 +207,7 @@ $(function() {
 		// не дает распространять событие click() на дочерние элементы
 		var target = e.target;
 		if(target != this) {
+		// if(target != this && target != $(this).find('i')) {
 			return true;
 		}
 		// end
@@ -215,6 +216,12 @@ $(function() {
 		$('.toggle-menu-arrow').removeClass('tma-click');
 		$('.tab + label').removeClass('tab-arrow');
 	});	
+
+	// $('.tab + label i').click(function(e) {
+	// 	$('.tab + label > ul').hide();
+	// 	$('.toggle-menu-arrow').removeClass('tma-click');
+	// 	$('.tab + label').removeClass('tab-arrow');
+	// });
 
 	$('.tab + label > ul li').click(function(e) {
 		// e.preventDefault();
@@ -228,13 +235,6 @@ $(function() {
 			$('.toggle-menu-arrow').removeClass('tma-click');
 			$('.tab + label').removeClass('tab-arrow');
 		}
-	});	
-
-	// $('.tma-click').on('click', function() {
-	// 	alert('Yes');
-	// });
-
-	
-	
+	});
 
 });
