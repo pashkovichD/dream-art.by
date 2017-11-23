@@ -348,6 +348,36 @@ body textarea:required:valid
 	i.ic-plexiglass
 		background-position: -76px -188px
 
+.sub-menu
+	& > a
+		// width: 100%
+		// display: block
+		// cursor: pointer
+		// font-weight: 600
+		// line-height: 3
+		// font-size: 14px		
+		// text-indent: 15px
+		// user-select: none
+		&:after
+			width: 6px
+			height: 6px
+			border-right: 1px solid #4d4319
+			border-bottom: 1px solid #4d4319
+			position: absolute
+			right: 10px
+			content: " "
+			top: 50%
+			margin-top: -3px
+			transform: rotate(-45deg)
+			-webkit-transition: all 0.2s ease-in-out
+			-moz-transition: all 0.2s ease-in-out
+			transition: all 0.2s ease-in-out
+		&.active:after
+			transform: rotate(45deg)
+			-webkit-transition: all 0.2s ease-in-out
+			-moz-transition: all 0.2s ease-in-out
+			transition: all 0.2s ease-in-out		
+
 .tab__content
 	padding: 10px 0px
 	background-color: #fff
