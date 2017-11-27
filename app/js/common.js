@@ -242,10 +242,12 @@ $(function() {
         // $(this).closest('.sub-menu').find('ul').not(dropDown).slideUp();
         $('.sub-menu').find('ul').not(dropDown).slideUp();
 
+        // с помощью класса .active управляем стрелочкой >
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
         } else {
-            $(this).closest('.sub-menu').find('a.active').removeClass('active');
+            // $(this).closest('.sub-menu').find('a.active').removeClass('active');
+            $('.sub-menu').find('a.active').removeClass('active');
             $(this).addClass('active');
         }
 
