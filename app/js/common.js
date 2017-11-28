@@ -234,7 +234,7 @@ $(function() {
 	});
 
 
-	$('.sub-menu a').click(function(e) {        
+	$('.sub-menu a').click(function(e) {
         //находим все p, которые находятся внутри li - родителя a
         var dropDown = $(this).closest('li').find('ul');
 
@@ -253,6 +253,7 @@ $(function() {
 
         dropDown.stop(false, true).slideToggle();
 
+        // отменяем стандартное поведение события
         e.preventDefault();
     });
 

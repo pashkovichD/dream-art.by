@@ -313,13 +313,18 @@ body textarea:required:valid
 			ul
 				display: none
 				position: absolute
-				background: #4d4319				
+				// background: #4d4319
+				// background: #ffcf10
+				// background: #ffeeaa
+				background: #fbdf72
 				left: 100%
 				top: 0
 				width: 100%	
-				padding: 5px				
+				padding: 5px
+				// transition: display .5s ease				
 				li					
-					transition: all .1s ease
+					transition: all .2s ease
+					border-bottom: 1px solid #ffe788
 					i.ic-submenu
 						// float: left
 						// display: block
@@ -332,10 +337,13 @@ body textarea:required:valid
 						margin-top: -3px
 						// margin-right: 10px
 					a
-						color: #fff
+						// color: #fff
 						margin-left: 10px
+						color: #98811e
 					&:hover
 						background: #716947	
+						a
+							color: #fff
 			// &:hover 				
 			// 	ul
 			// 		display: block
