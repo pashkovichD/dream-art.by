@@ -106,7 +106,7 @@ body textarea:required:valid
 	width: 18px
 	height: 8px
 	background: url(../img/sprite.png) -200px -11px no-repeat	
-	z-index: 3
+	z-index: 2
 	position: absolute		
 	top: auto
 	bottom: 0
@@ -316,7 +316,9 @@ body textarea:required:valid
 				// background: #4d4319
 				// background: #ffcf10
 				// background: #ffeeaa
-				background: #fbdf72
+				// background: #fbdf72
+				// background: #ffdd55
+				background: #ffe373
 				left: 100%
 				top: 0
 				width: 100%	
@@ -324,13 +326,17 @@ body textarea:required:valid
 				// transition: display .5s ease				
 				li					
 					transition: all .2s ease
-					border-bottom: 1px solid #ffe788
+					// border-bottom: 1px solid #ffe788
+					border-bottom: 1px solid #edcd4f
+					// box-shadow: 0px 1px 1px rgba(255,255,0,.5) inset
+					&:first-child
+						border-top: 1px solid #edcd4f
 					i.ic-submenu
 						// float: left
 						// display: block
 						position: absolute
 						top: 50%
-						left: 5px
+						left: 7px
 						width: 5px
 						height: 5px		
 						background-position: -127px -250px						
@@ -339,7 +345,7 @@ body textarea:required:valid
 					a
 						// color: #fff
 						margin-left: 10px
-						color: #98811e
+						color: #98811e						
 					&:hover
 						background: #716947	
 						a
@@ -387,11 +393,11 @@ body textarea:required:valid
 			-webkit-transition: all 0.2s ease-in-out
 			-moz-transition: all 0.2s ease-in-out
 			transition: all 0.2s ease-in-out
-		&.active:after
-			transform: rotate(45deg)
-			-webkit-transition: all 0.2s ease-in-out
-			-moz-transition: all 0.2s ease-in-out
-			transition: all 0.2s ease-in-out		
+		// &.active:after
+		// 	transform: rotate(45deg)
+		// 	-webkit-transition: all 0.2s ease-in-out
+		// 	-moz-transition: all 0.2s ease-in-out
+		// 	transition: all 0.2s ease-in-out
 
 .tab__content
 	padding: 10px 0px

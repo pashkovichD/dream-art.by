@@ -164,13 +164,6 @@ $(function() {
 	
 	/*--- END Слайдер Slick.js ---*/
 
-	// $('.tab:checked + label').mouseover(function() {
-	// 	$('.dropdown_stendy').css('display','block');
-	// });
-
-	// $('.tab:checked + label').mouseout(function() {
-	// 	$('.dropdown_stendy').css('display','none');
-	// });
 
 	$('.tab').click(function() {
 		if(!$(this).attr('checked')) {
@@ -182,8 +175,7 @@ $(function() {
 	/*--- Submenu каталога ---*/
 	$('.toggle-menu-arrow').click(function(e) {		
 	    // отменянем событие для родителя
-	    e.stopPropagation();
-	    // e.preventDefault();
+	    e.stopPropagation();	
 
 		if($(this).hasClass('tma-click')) {
 			$(this).removeClass('tma-click');
@@ -211,6 +203,7 @@ $(function() {
 		$('.tab + label ul').hide();
 		$('.toggle-menu-arrow').removeClass('tma-click');
 		$('.tab + label').removeClass('tab-arrow');
+		$('.sub-menu').find('a.active').removeClass('active');
 	});	
 
 	// мое раскрытие вложенного списка
@@ -228,33 +221,71 @@ $(function() {
 
 	// скрытие списка при клике по элементу списка
 	$('.tab + label > ul li').click(function(e) {
-		// $(this).parent().hide();
-		// $('.toggle-menu-arrow').removeClass('tma-click');
-		// $('.tab + label').removeClass('tab-arrow');		
+		// кроме элементов, имеющих вложенное меню
+		if($(this).hasClass('sub-menu')) {
+			return true;
+		}
+		$(this).parent().hide();
+		$('.toggle-menu-arrow').removeClass('tma-click');
+		$('.tab + label').removeClass('tab-arrow');		
+		$('.tab + label ul').hide();
+		$('.sub-menu').find('a.active').removeClass('active');
 	});
 
+	
+	// $(window).resize(function() {
+		
+	// 	var dw = $(document).width();
+		
+	// 	if(dw < 992) {
+
+	// 		$('.sub-menu a').click(function(e) {
+	// 	        //находим все p, которые находятся внутри li - родителя a
+	// 	        var dropDown = $(this).closest('li').find('ul');
+
+	// 	        //сворачиваем все p, кроме dropDown, т.е. который открываем. Получаем эффект открытия нужного и закрытия всех остальных
+	// 	        $('.sub-menu').find('ul').not(dropDown).slideUp(700);        
+
+	// 	        // с помощью класса .active управляем стрелочкой >
+	// 	        if ($(this).hasClass('active')) {
+	// 	            $(this).removeClass('active');
+	// 	        } else {            
+	// 	            $('.sub-menu').find('a.active').removeClass('active');
+	// 	            $(this).addClass('active');
+	// 	        }
+
+	// 	        dropDown.stop(false, true).slideToggle();        
+
+	// 	        // отменяем стандартное поведение события
+	// 	        e.preventDefault();
+	// 	    });
+
+	// 	}
+
+	// });
 
 	$('.sub-menu a').click(function(e) {
         //находим все p, которые находятся внутри li - родителя a
         var dropDown = $(this).closest('li').find('ul');
 
         //сворачиваем все p, кроме dropDown, т.е. который открываем. Получаем эффект открытия нужного и закрытия всех остальных
-        // $(this).closest('.sub-menu').find('ul').not(dropDown).slideUp();
-        $('.sub-menu').find('ul').not(dropDown).slideUp();
+        $('.sub-menu').find('ul').not(dropDown).slideUp(700);        
 
         // с помощью класса .active управляем стрелочкой >
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
-        } else {
-            // $(this).closest('.sub-menu').find('a.active').removeClass('active');
+        } else {            
             $('.sub-menu').find('a.active').removeClass('active');
             $(this).addClass('active');
         }
 
-        dropDown.stop(false, true).slideToggle();
+        dropDown.stop(false, true).slideToggle();        
 
         // отменяем стандартное поведение события
         e.preventDefault();
     });
+
+	
+	
 
 });
