@@ -233,43 +233,49 @@ $(function() {
 	});
 
 	
-	// $(window).resize(function() {
-		
-	// 	var dw = $(document).width();
-		
-	// 	if(dw < 992) {
+	// var dw = $(document).width();
+	
+	// if(dw < 992) {
 
-	// 		$('.sub-menu a').click(function(e) {
-	// 	        //находим все p, которые находятся внутри li - родителя a
-	// 	        var dropDown = $(this).closest('li').find('ul');
+	// 	$('.sub-menu a').click(function(e) {
+	//         //находим все p, которые находятся внутри li - родителя a
+	//         var dropDown = $(this).closest('li').find('ul');
 
-	// 	        //сворачиваем все p, кроме dropDown, т.е. который открываем. Получаем эффект открытия нужного и закрытия всех остальных
-	// 	        $('.sub-menu').find('ul').not(dropDown).slideUp(700);        
+	//         //сворачиваем все p, кроме dropDown, т.е. который открываем. Получаем эффект открытия нужного и закрытия всех остальных
+	//         $('.sub-menu').find('ul').not(dropDown).slideUp(700);        
 
-	// 	        // с помощью класса .active управляем стрелочкой >
-	// 	        if ($(this).hasClass('active')) {
-	// 	            $(this).removeClass('active');
-	// 	        } else {            
-	// 	            $('.sub-menu').find('a.active').removeClass('active');
-	// 	            $(this).addClass('active');
-	// 	        }
+	//         // с помощью класса .active управляем стрелочкой >
+	//         if ($(this).hasClass('active')) {
+	//             $(this).removeClass('active');
+	//         } else {            
+	//             $('.sub-menu').find('a.active').removeClass('active');
+	//             $(this).addClass('active');
+	//         }
 
-	// 	        dropDown.stop(false, true).slideToggle();        
+	//         dropDown.stop(false, true).slideToggle();        
 
-	// 	        // отменяем стандартное поведение события
-	// 	        e.preventDefault();
-	// 	    });
+	//         // отменяем стандартное поведение события
+	//         e.preventDefault();
+	//     });
 
-	// 	}
-
-	// });
+	// }
 
 	$('.sub-menu a').click(function(e) {
         //находим все p, которые находятся внутри li - родителя a
         var dropDown = $(this).closest('li').find('ul');
 
-        //сворачиваем все p, кроме dropDown, т.е. который открываем. Получаем эффект открытия нужного и закрытия всех остальных
-        $('.sub-menu').find('ul').not(dropDown).slideUp(700);        
+        // if(dw > 991) {        	
+        // 	$('.sub-menu').find('ul').not(dropDown).hide();
+        // 	dropDown.toggle();
+        // } else {
+        // 	// //сворачиваем все p, кроме dropDown, т.е. который открываем. Получаем эффект открытия нужного и закрытия всех остальных
+        // 	$('.sub-menu').find('ul').not(dropDown).slideUp(700);
+        // 	dropDown.stop(false, true).slideToggle();
+        // }        
+
+        // //сворачиваем все p, кроме dropDown, т.е. который открываем. Получаем эффект открытия нужного и закрытия всех остальных
+        	$('.sub-menu').find('ul').not(dropDown).slideUp(700);
+        	dropDown.stop(false, true).slideToggle();
 
         // с помощью класса .active управляем стрелочкой >
         if ($(this).hasClass('active')) {
@@ -277,9 +283,7 @@ $(function() {
         } else {            
             $('.sub-menu').find('a.active').removeClass('active');
             $(this).addClass('active');
-        }
-
-        dropDown.stop(false, true).slideToggle();        
+        }        
 
         // отменяем стандартное поведение события
         e.preventDefault();

@@ -319,10 +319,13 @@ body textarea:required:valid
 				// background: #fbdf72
 				// background: #ffdd55
 				background: #ffe373
-				left: 100%
-				top: 0
-				width: 100%	
-				padding: 5px
+				// left: 100%
+				// top: 0				
+				// width: 100%	
+				// padding: 5px
+				position: static
+				width: auto				
+				padding: 0
 				// transition: display .5s ease				
 				li					
 					transition: all .2s ease
@@ -393,11 +396,11 @@ body textarea:required:valid
 			-webkit-transition: all 0.2s ease-in-out
 			-moz-transition: all 0.2s ease-in-out
 			transition: all 0.2s ease-in-out
-		// &.active:after
-		// 	transform: rotate(45deg)
-		// 	-webkit-transition: all 0.2s ease-in-out
-		// 	-moz-transition: all 0.2s ease-in-out
-		// 	transition: all 0.2s ease-in-out
+		&.active:after
+			transform: rotate(45deg)
+			-webkit-transition: all 0.2s ease-in-out
+			-moz-transition: all 0.2s ease-in-out
+			transition: all 0.2s ease-in-out
 
 .tab__content
 	padding: 10px 0px
