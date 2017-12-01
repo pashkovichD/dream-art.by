@@ -264,15 +264,6 @@ $(function() {
         //находим все p, которые находятся внутри li - родителя a
         var dropDown = $(this).closest('li').find('ul');
 
-        // if(dw > 991) {        	
-        // 	$('.sub-menu').find('ul').not(dropDown).hide();
-        // 	dropDown.toggle();
-        // } else {
-        // 	// //сворачиваем все p, кроме dropDown, т.е. который открываем. Получаем эффект открытия нужного и закрытия всех остальных
-        // 	$('.sub-menu').find('ul').not(dropDown).slideUp(700);
-        // 	dropDown.stop(false, true).slideToggle();
-        // }        
-
         // //сворачиваем все p, кроме dropDown, т.е. который открываем. Получаем эффект открытия нужного и закрытия всех остальных
         	$('.sub-menu').find('ul').not(dropDown).slideUp(700);
         	dropDown.stop(false, true).slideToggle();
