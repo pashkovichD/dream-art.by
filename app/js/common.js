@@ -280,7 +280,14 @@ $(function() {
         e.preventDefault();
     });
 
-	
-	
+
+	// открытие tab'ов
+    // if($('#tab1').attr('checked') == 'checked') {
+    // 	$('.tab__content').addClass('tab_view');
+    // }
+
+    // $('.sub-menu a').click(function(e) {
+        
+    // });	
 
 });
