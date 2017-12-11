@@ -188,6 +188,11 @@ $(function() {
 		}
 	});	
 
+	// открытие tab'а по умолчанию
+    if($('#tab' + '1').attr('checked') == 'checked') {    	
+    	$('.tab__content').eq(0).addClass('tab_view');
+    }
+
 	$('.tab + label').click(function(e) {
 		// не дает распространять событие click() на дочерние элементы		
 		var target = e.target;
@@ -204,6 +209,13 @@ $(function() {
 		$('.toggle-menu-arrow').removeClass('tma-click');
 		$('.tab + label').removeClass('tab-arrow');
 		$('.sub-menu').find('a.active').removeClass('active');
+
+		// узнаем номер tab'а
+		label_for = $(this).attr('for')
+		label_num = label_for.charAt(label_for.length - 1);		
+		// смена tab'ов
+		$('.tab__content').removeClass('tab_view');
+		$('.tab__content').eq(label_num - 1).addClass('tab_view');
 	});	
 
 	// мое раскрытие вложенного списка
@@ -281,13 +293,6 @@ $(function() {
     });
 
 
-	// открытие tab'ов
-    // if($('#tab1').attr('checked') == 'checked') {
-    // 	$('.tab__content').addClass('tab_view');
-    // }
-
-    // $('.sub-menu a').click(function(e) {
-        
-    // });	
+	
 
 });

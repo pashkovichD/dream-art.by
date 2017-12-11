@@ -247,8 +247,7 @@
 							font-size: em(16px)
 						.price
 							span
-								font-size: em(23px)	
-
+								font-size: em(23px)
 
 
 /* Small Devices, Tablets */
@@ -344,6 +343,35 @@
 				.product
 					width: 85%
 					margin: 0 auto 30px auto
+
+	.menu_content
+		visibility: hidden
+
+	.menu_short
+		display: block
+		.toggle-menu-short
+			cursor: pointer
+			width: 20px
+			height: 20px
+			position: absolute
+			span
+				display: block
+				width: 20px
+				height: 1px
+				position: relative
+				background: green
+				&:before, &:after
+					// @extend .before
+					width: 20px					
+					display: block
+					height: 1px
+					background: green					
+					content: ""
+					transition: transform 0.35s
+				&:before
+	 				transform: translate(0%, -4px)
+				&:after
+					transform: translate(0%, 3px)
 
 
 /* Свой размер */
