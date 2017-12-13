@@ -188,6 +188,22 @@ $(function() {
 		}
 	});	
 
+	/*--- открытие меню каталога на маленьких экранах ---*/
+	$('.toggle-menu-short').click(function(e) {		
+	    // отменянем событие для родителя
+	    // e.stopPropagation();	
+
+		if($(this).hasClass('short-click')) {
+			$(this).removeClass('short-click');
+			// $(this).next().slideUp(100);
+			// $(this).parent().removeClass('tab-arrow');
+		} else {
+			$(this).addClass('short-click');
+			// $(this).next().slideDown(100);
+			// $(this).parent().addClass('tab-arrow');
+		}
+	});
+
 	// открытие tab'а по умолчанию
     if($('#tab' + '1').attr('checked') == 'checked') {    	
     	$('.tab__content').eq(0).addClass('tab_view');
@@ -245,33 +261,6 @@ $(function() {
 	});
 
 	
-	// var dw = $(document).width();
-	
-	// if(dw < 992) {
-
-	// 	$('.sub-menu a').click(function(e) {
-	//         //находим все p, которые находятся внутри li - родителя a
-	//         var dropDown = $(this).closest('li').find('ul');
-
-	//         //сворачиваем все p, кроме dropDown, т.е. который открываем. Получаем эффект открытия нужного и закрытия всех остальных
-	//         $('.sub-menu').find('ul').not(dropDown).slideUp(700);        
-
-	//         // с помощью класса .active управляем стрелочкой >
-	//         if ($(this).hasClass('active')) {
-	//             $(this).removeClass('active');
-	//         } else {            
-	//             $('.sub-menu').find('a.active').removeClass('active');
-	//             $(this).addClass('active');
-	//         }
-
-	//         dropDown.stop(false, true).slideToggle();        
-
-	//         // отменяем стандартное поведение события
-	//         e.preventDefault();
-	//     });
-
-	// }
-
 	$('.sub-menu a').click(function(e) {
         //находим все p, которые находятся внутри li - родителя a
         var dropDown = $(this).closest('li').find('ul');

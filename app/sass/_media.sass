@@ -2,6 +2,8 @@
 
 /*==========  Desktop First Method  ==========*/
 
+
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px - 1)
 	.main-menu 
@@ -345,33 +347,53 @@
 					margin: 0 auto 30px auto
 
 	.menu_content
-		visibility: hidden
+		// visibility: hidden
+		display: none	
 
 	.menu_short
 		display: block
+		position: relative
+		height: 30px		
 		.toggle-menu-short
 			cursor: pointer
-			width: 20px
-			height: 20px
+			width: 22px
+			height: 30px
 			position: absolute
+			top: 0
+			left: 20px			
 			span
 				display: block
-				width: 20px
-				height: 1px
+				width: 22px
+				height: 2px
 				position: relative
-				background: green
-				&:before, &:after
-					// @extend .before
-					width: 20px					
+				top: 50%
+				background: #555
+				transition: transform 0.35s
+				// box-shadow: 1px 1px 1px rgba(255,255,255,1)
+				&:before, &:after			
+					width: 22px					
 					display: block
-					height: 1px
-					background: green					
-					content: ""
+					height: 2px
+					background: #555					
+					content: ''
 					transition: transform 0.35s
+					// box-shadow: 1px 1px 1px rgba(255,255,255,1)
 				&:before
-	 				transform: translate(0%, -4px)
+	 				transform: translate(0%, -6px)
 				&:after
-					transform: translate(0%, 3px)
+					transform: translate(0%, 4px)
+		p
+			margin-left: 50px
+		.short-click
+			span
+				transform: rotate(90deg)
+				background: transparent
+			span:before
+				// transform: translate(-0%, -3px) rotate(45deg) scaleX(0.7)
+				transform: translate(-0%, 3px) rotate(45deg)
+			span:after
+				// transform: translate(-0%, 3px) rotate(-45deg) scaleX(0.7)
+				transform: translate(-0%, 1px) rotate(-45deg)
 
 
 /* Свой размер */
