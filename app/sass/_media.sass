@@ -334,6 +334,7 @@
 		// font-size: 12px	
 		// letter-spacing: .5px
 		// height: 36px
+		display: block
 		i.ic-stendy,
 		i.ic-tables,
 		i.ic-plexiglass
@@ -347,17 +348,19 @@
 					margin: 0 auto 30px auto
 
 	.menu_content
-		// visibility: hidden
+		// visibility: hidden		
 		display: none	
+		position: absolute
+		left: -1000px
 
 	.menu_short
 		display: block
 		position: relative
-		height: 30px		
-		.toggle-menu-short
-			cursor: pointer
+		height: 40px
+		cursor: pointer
+		.toggle-menu-short			
 			width: 22px
-			height: 30px
+			height: 40px
 			position: absolute
 			top: 0
 			left: 20px			
@@ -382,8 +385,11 @@
 	 				transform: translate(0%, -6px)
 				&:after
 					transform: translate(0%, 4px)
-		p
+		.catalog-arrow
 			margin-left: 50px
+			width: 200px
+			height: 40px
+			background: url(../img/sprite.png) -145px -40px no-repeat
 		.short-click
 			span
 				transform: rotate(90deg)

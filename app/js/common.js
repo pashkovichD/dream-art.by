@@ -90,6 +90,14 @@ $(function() {
 				width : preWidthX + 'px'		
 			});
 		}
+
+		// появление меню каталога при клике по кнопке на разрешении меньше 768px
+		if(dw > 767) {
+			// $('.menu_content').css({'display':'block', 'top':'0'});
+		} else {
+			// $('.menu_content').css({'display':'none', 'top':'-1000px'});
+		}
+
 	});
 
 	/* выполнение скрипта при разрешении экрана >=992px */
@@ -189,16 +197,25 @@ $(function() {
 	});	
 
 	/*--- открытие меню каталога на маленьких экранах ---*/
-	$('.toggle-menu-short').click(function(e) {		
+	$('.menu_short').click(function(e) {		
 	    // отменянем событие для родителя
-	    // e.stopPropagation();	
+	    // e.stopPropagation();		    
 
-		if($(this).hasClass('short-click')) {
-			$(this).removeClass('short-click');
+	    $('.catalog-arrow').toggle();
+
+	    toggle_menu = $(this).children('.toggle-menu-short');
+		if(toggle_menu.hasClass('short-click')) {
+			toggle_menu.removeClass('short-click');
 			// $(this).next().slideUp(100);
 			// $(this).parent().removeClass('tab-arrow');
+			$('.menu_content').animate({'left':'-1000px','opacity':'0'}, 100);
+			// $('.menu_content').css({'display':'none', 'top':'-1000px'});
+			// $('.menu_content').css('top','-1000px');
 		} else {
-			$(this).addClass('short-click');
+			toggle_menu.addClass('short-click');
+			$('.menu_content').animate({'left':'0','opacity':'1'}, 100);
+			// $('.menu_content').css({'display':'block', 'top':'0'});
+			// $('.menu_content').css('top','0');
 			// $(this).next().slideDown(100);
 			// $(this).parent().addClass('tab-arrow');
 		}
