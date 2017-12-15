@@ -93,9 +93,11 @@ $(function() {
 
 		// появление меню каталога при клике по кнопке на разрешении меньше 768px
 		if(dw > 767) {
-			// $('.menu_content').css({'display':'block', 'top':'0'});
+			$('.menu_content').css({'opacity':1, 'left':'0'});
 		} else {
-			// $('.menu_content').css({'display':'none', 'top':'-1000px'});
+			if(!$('.toggle-menu-short').hasClass('short-click')) {
+				$('.menu_content').css({'opacity':0, 'left':'-400px'});	
+			}
 		}
 
 	});
@@ -201,20 +203,22 @@ $(function() {
 	    // отменянем событие для родителя
 	    // e.stopPropagation();		    
 
-	    $('.catalog-arrow').toggle();
+	    // $('.catalog-arrow').toggle();
 
 	    toggle_menu = $(this).children('.toggle-menu-short');
 		if(toggle_menu.hasClass('short-click')) {
 			toggle_menu.removeClass('short-click');
 			// $(this).next().slideUp(100);
 			// $(this).parent().removeClass('tab-arrow');
-			$('.menu_content').animate({'left':'-1000px','opacity':'0'}, 100);
-			// $('.menu_content').css({'display':'none', 'top':'-1000px'});
+			// $('.menu_content').css('display', 'none').animate({left: "-1000px"}, 100);
+			$('.menu_content').animate({left: '-400px', opacity: 0}, 100);
+			// $('.menu_content').css({'display':'none', 'left':'-1000px'});
 			// $('.menu_content').css('top','-1000px');
 		} else {
 			toggle_menu.addClass('short-click');
-			$('.menu_content').animate({'left':'0','opacity':'1'}, 100);
-			// $('.menu_content').css({'display':'block', 'top':'0'});
+			// $('.menu_content').css('display', 'block').animate({left: "0",}, 100);
+			$('.menu_content').animate({left: '0', opacity: 1}, 100);
+			// $('.menu_content').css({'display':'block', 'left':'0'});
 			// $('.menu_content').css('top','0');
 			// $(this).next().slideDown(100);
 			// $(this).parent().addClass('tab-arrow');
