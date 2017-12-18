@@ -122,7 +122,7 @@
 	
 	.tab + label
 		height: 40px	
-		padding: 10px 30px 10px 10px
+		padding: 10px 35px 10px 10px
 		font-size: 14px		
 		i.ic-stendy,
 		i.ic-tables,
@@ -187,7 +187,8 @@
 			background-position: -200px -21px
 			margin-left: -9px
 		.toggle-menu-arrow
-			margin-top: -7px
+			// margin-top: -7px
+			top: 13px
 	.tab-arrow
 		&:after
 			height: 6px
@@ -336,6 +337,7 @@
 		// font-size: 12px	
 		// letter-spacing: .5px
 		// height: 36px
+		height: auto
 		display: block
 		i.ic-stendy,
 		i.ic-tables,
@@ -343,6 +345,9 @@
 			// top: -8px
 		ul.dropdown_plexiglass, ul.dropdown_stendy, ul.dropdown_tables
 			width: 100%
+			box-shadow: none
+			position: static
+			margin-top: 25px
 	.tab:checked + label
 		&:before
 			content: none
@@ -362,7 +367,8 @@
 		left: -400px
 		z-index: 2
 		width: 300px
-		background: #ffdd55
+		background: #ffeea9
+		border: 1px solid #ffdd55
 		margin-top: 40px
 
 	.menu_short
