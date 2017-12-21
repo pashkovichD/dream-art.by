@@ -339,17 +339,28 @@
 		// height: 36px
 		height: auto
 		display: block
+		padding: 10px 0
 		i.ic-stendy,
 		i.ic-tables,
 		i.ic-plexiglass
 			// top: -8px
+			left: 10px
+		span
+			display: block
+			text-align: left
+			// padding-left: 120px
+			margin-left: 110px
 		ul.dropdown_plexiglass, ul.dropdown_stendy, ul.dropdown_tables
 			width: 100%
 			box-shadow: none
 			position: static
-			margin-top: 25px
+			margin-top: 10px
 	.tab:checked + label
+		background-image: url(../img/bg_menu_catalog_40.jpg)
 		&:before
+			content: none
+	.tab-arrow
+		&:after
 			content: none
 
 	.tab__content		

@@ -189,11 +189,13 @@ $(function() {
 
 		if($(this).hasClass('tma-click')) {
 			$(this).removeClass('tma-click');
-			$(this).next().slideUp(100);
+			$(this).next().slideUp(50);
+			// $(this).next().hide();
 			$(this).parent().removeClass('tab-arrow');
 		} else {
 			$(this).addClass('tma-click');
-			$(this).next().slideDown(100);
+			$(this).next().slideDown(50);
+			// $(this).next().show();
 			$(this).parent().addClass('tab-arrow');
 		}
 	});	
@@ -201,27 +203,15 @@ $(function() {
 	/*--- открытие меню каталога на маленьких экранах ---*/
 	$('.menu_short').click(function(e) {		
 	    // отменянем событие для родителя
-	    // e.stopPropagation();		    
-
-	    // $('.catalog-arrow').toggle();
+	    // e.stopPropagation();
 
 	    toggle_menu = $(this).children('.toggle-menu-short');
 		if(toggle_menu.hasClass('short-click')) {
-			toggle_menu.removeClass('short-click');
-			// $(this).next().slideUp(100);
-			// $(this).parent().removeClass('tab-arrow');
-			// $('.menu_content').css('display', 'none').animate({left: "-1000px"}, 100);
-			$('.menu_content').animate({left: '-400px', opacity: 0}, 100);
-			// $('.menu_content').css({'display':'none', 'left':'-1000px'});
-			// $('.menu_content').css('top','-1000px');
+			toggle_menu.removeClass('short-click');			
+			$('.menu_content').animate({left: '-400px', opacity: 0}, 100);			
 		} else {
-			toggle_menu.addClass('short-click');
-			// $('.menu_content').css('display', 'block').animate({left: "0",}, 100);
-			$('.menu_content').animate({left: '0', opacity: 1}, 100);
-			// $('.menu_content').css({'display':'block', 'left':'0'});
-			// $('.menu_content').css('top','0');
-			// $(this).next().slideDown(100);
-			// $(this).parent().addClass('tab-arrow');
+			toggle_menu.addClass('short-click');			
+			$('.menu_content').animate({left: '0', opacity: 1}, 100);			
 		}
 	});
 
@@ -232,17 +222,17 @@ $(function() {
 
 	$('.tab + label').click(function(e) {
 		// не дает распространять событие click() на дочерние элементы		
-		var target = e.target;
+		var target = e.target;		
 		if(target != this) {
-			// кроме <i>
-			if(target.nodeName != 'I') {
+			// кроме <i> и <span>
+			if((target.nodeName != 'I') && (target.nodeName != 'SPAN')) {
 				return true;
-			}
-			
+			}			
 		}
 		// end
 
 		$('.tab + label ul').hide();
+		// $('.tab + label ul').css('display','block');
 		$('.toggle-menu-arrow').removeClass('tma-click');
 		$('.tab + label').removeClass('tab-arrow');
 		$('.sub-menu').find('a.active').removeClass('active');
@@ -254,19 +244,6 @@ $(function() {
 		$('.tab__content').removeClass('tab_view');
 		$('.tab__content').eq(label_num - 1).addClass('tab_view');
 	});	
-
-	// мое раскрытие вложенного списка
-	// $('.tab + label > ul li').click(function(e) {
-	// 	if($(this).children('ul').length != 0) {
-	// 		$(this).parent().prev().addClass('tma-click');
-	// 		$(this).parent().css('display', 'block');
-	// 		$(this).children('ul').toggle();			
-	// 	} else {
-	// 		$(this).parent().hide();
-	// 		$('.toggle-menu-arrow').removeClass('tma-click');
-	// 		$('.tab + label').removeClass('tab-arrow');
-	// 	}
-	// });
 
 	// скрытие списка при клике по элементу списка
 	$('.tab + label > ul li').click(function(e) {
