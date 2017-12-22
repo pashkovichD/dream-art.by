@@ -563,14 +563,14 @@ body textarea:required:valid
 					left: 50%
 					margin-left: -100px
 					position: absolute
-					z-index: 3
+					z-index: 3					
 					a
 						// background: #202020
 						// background: #138808
 						// #319900
 						// background: shade($main-color-green, 20%)
 						// background: tint($main-color-green, 10%)
-						background: #777777
+						background: #309900
 						opacity: .8
 						// border: 3px double white
 						border: 1px solid transparent
@@ -585,7 +585,7 @@ body textarea:required:valid
 						&:hover
 							// background: #194368
 							// border-color: #194368
-							background: #555555
+							background: #257700
 							// border-color: #333333
 							// color: shade($main-color-green, 20%)
 					.add-to-cart, .order
@@ -599,10 +599,13 @@ body textarea:required:valid
 						transition: .4s ease-in-out
 						// background: url(../img/sprite.png) no-repeat												
 						a
-							background: #ff7200 url(../img/icons/cart.png) 35px center no-repeat
+							background: rgba(255,255,255,.5) url(../img/icons/cart.png) 35px center no-repeat
+							border-color: #309900
+							color: #309900
 							&:hover
-								background: #ff3e00 url(../img/icons/cart.png) 35px center no-repeat
-								border-color: #df6500
+								background:  url(../img/icons/cart.png) 35px center no-repeat
+								border-color: #257700
+								color: #257700
 
 				&:hover .add-to-cart,
 				&:hover .order

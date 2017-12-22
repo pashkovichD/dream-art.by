@@ -21,20 +21,36 @@ $(function() {
 		$(this).animate({top: '-200px'}, 100);
 	});
 
-	// сворачивание поиска при клике вне формы
+	// при клике вне...
 	$(document).click( function(e){
+		// ...сворачивание поиска
 		if( $(event.target).closest("#search-form").length ) 
 			return;
 		$("#search-form").animate({top: '-200px'}, 100);
+
+		// ...сворачивание меню каталога на экранах <= 768px
+		if( $(event.target).closest('.menu_content').length || $(event.target).closest('.menu_short').length ) 
+			return;
+		closeMenuShort();
+
 		e.stopPropagation();
 	});
 
-	// сворачивание поиска при нажатии клавиши ESC
+	// при нажатии клавиши ESC...	
 	$(document).keydown(function(eventObject){
+		// ...сворачивание поиска
 		var top = parseInt($('#search-form').css('top'));
 		if (eventObject.which == 27 && top == 0) {
 			$('#search-form').animate({top: '-200px'}, 100);  
 		}
+
+		// ...сворачивание меню каталога на экранах <= 768px
+		var left_short = parseInt($('.menu_content').css('left'));
+		if (eventObject.which == 27 && left_short == 0) {			
+			closeMenuShort();
+		}
+
+
 	});
 	
 
@@ -97,6 +113,8 @@ $(function() {
 		} else {
 			if(!$('.toggle-menu-short').hasClass('short-click')) {
 				$('.menu_content').css({'opacity':0, 'left':'-400px'});	
+			} else {
+				$('.menu_content').css({'opacity':.95, 'left':'0'});
 			}
 		}
 
@@ -208,10 +226,10 @@ $(function() {
 	    toggle_menu = $(this).children('.toggle-menu-short');
 		if(toggle_menu.hasClass('short-click')) {
 			toggle_menu.removeClass('short-click');			
-			$('.menu_content').animate({left: '-400px', opacity: 0}, 100);			
+			$('.menu_content').animate({left: '-400px', opacity: 0}, 100);
 		} else {
 			toggle_menu.addClass('short-click');			
-			$('.menu_content').animate({left: '0', opacity: 1}, 100);			
+			$('.menu_content').animate({left: '0', opacity: .95}, 100);			
 		}
 	});
 
@@ -255,9 +273,18 @@ $(function() {
 		$('.toggle-menu-arrow').removeClass('tma-click');
 		$('.tab + label').removeClass('tab-arrow');		
 		$('.tab + label ul').hide();
-		$('.sub-menu').find('a.active').removeClass('active');
+		$('.sub-menu').find('a.active').removeClass('active');	
+		closeMenuShort();
 	});
 
+	// сворачиваем все меню на экранах < 768px
+	function closeMenuShort() {
+		screen_width = $(window).width();
+		if(screen_width <= 767) {
+		    $('.menu_short').children('.toggle-menu-short').removeClass('short-click');
+			$('.menu_content').animate({left: '-400px', opacity: 0}, 100);
+		}
+	}
 	
 	$('.sub-menu a').click(function(e) {
         //находим все p, которые находятся внутри li - родителя a

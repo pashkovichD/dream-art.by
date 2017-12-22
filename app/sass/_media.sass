@@ -237,9 +237,9 @@
 							font-size: em(14px)
 						.order
 							a
-								background: #33647e url(../img/icons/cart_mini.png) 24px 7px no-repeat
+								// background: #33647e url(../img/icons/cart_mini.png) 24px 7px no-repeat
 								&:hover
-									background: tint($main-color-green, 10%) url(../img/icons/cart_mini.png) 24px 7px no-repeat									
+									// background: tint($main-color-green, 10%) url(../img/icons/cart_mini.png) 24px 7px no-repeat									
 					.img_wrap
 						margin: 15px auto 100px auto				
 					.product_desc 
@@ -339,22 +339,26 @@
 		// height: 36px
 		height: auto
 		display: block
-		padding: 10px 0
+		padding: 10px 0 0 0
+		border-bottom: 1px solid #ffe786
+		&:last-child
+			border-bottom: none
 		i.ic-stendy,
 		i.ic-tables,
 		i.ic-plexiglass
 			// top: -8px
 			left: 10px
-		span
+		& > span
 			display: block
 			text-align: left
 			// padding-left: 120px
 			margin-left: 110px
+			padding-bottom: 10px
 		ul.dropdown_plexiglass, ul.dropdown_stendy, ul.dropdown_tables
 			width: 100%
 			box-shadow: none
 			position: static
-			margin-top: 10px
+			// margin-top: 10px
 	.tab:checked + label
 		background-image: url(../img/bg_menu_catalog_40.jpg)
 		&:before
@@ -378,7 +382,7 @@
 		left: -400px
 		z-index: 2
 		width: 300px
-		background: #ffeea9
+		background: #fff3c2
 		border: 1px solid #ffdd55
 		margin-top: 40px
 
@@ -418,7 +422,7 @@
 					transform: translate(0%, 4px)
 		.catalog-arrow
 			margin-left: 50px
-			width: 200px
+			width: 125px
 			height: 40px
 			background: url(../img/sprite.png) -145px -40px no-repeat
 		.short-click
