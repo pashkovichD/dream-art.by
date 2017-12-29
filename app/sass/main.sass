@@ -597,15 +597,26 @@ body textarea:required:valid
 						transition: .6s ease-in-out
 					.order
 						transition: .4s ease-in-out
-						// background: url(../img/sprite.png) no-repeat												
+						position: relative
+						// background: url(../img/sprite.png) no-repeat	
+						i.ic-order
+							width: 24px
+							height: 24px
+							background-position: -219px -14px							
+							position: absolute
+							top: 6px
+							left: 33px							
 						a
-							background: rgba(255,255,255,.5) url(../img/icons/cart.png) 35px center no-repeat
+							background-color: rgba(255,255,255,.5)
+							// background: rgba(255,255,255,.5) url(../img/icons/cart.png) 33px center no-repeat							
 							border-color: #309900
 							color: #309900
 							&:hover
-								background:  url(../img/icons/cart.png) 35px center no-repeat
+								// background:  url(../img/icons/cart.png) 35px center no-repeat
 								border-color: #257700
 								color: #257700
+						&:hover i.ic-order
+
 
 				&:hover .add-to-cart,
 				&:hover .order
