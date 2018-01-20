@@ -307,6 +307,11 @@ $(function() {
     });
 
 
-	
+	// заказать товар order - всплывающее окно 
+	$('.order').click(function() {
+		alert('ORDER');
+	}); 
+
+	//end order
 
 });
